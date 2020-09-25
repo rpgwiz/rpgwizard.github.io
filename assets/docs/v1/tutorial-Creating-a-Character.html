@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Creating a Character</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                <div class="dropdown is-hoverable is-right">
+                    <a class="dropdown-trigger link">
+                        Tutorials
+                        <i class="fas fa-chevron-down fa-xs"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                        
+                            <a class="dropdown-item" href="tutorial-01-Getting-Started.html">
+                                Getting Started
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-02-Your-First-Game.html">
+                                Your First Game
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-03-Programming-Guide.html">
+                                Programming Guide
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-04-Default-Systems.html">
+                                Default Systems
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-05-Example-Games.html">
+                                Example Games
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-Home.html">
+                                Home
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-Tutorials.html">
+                                Tutorials
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar tutorials"
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-01-Getting-Started.html">Getting Started</a><ul><li><a href="tutorial-What-is-RPGWizard.html">What is RPGWizard</a></li><li><a href="tutorial-Trying-Out-the-Demo.html">Trying Out the Demo</a></li><li><a href="tutorial-FAQ.html">FAQ</a></li></ul></li><li><a href="tutorial-02-Your-First-Game.html">Your First Game</a><ul><li><a href="tutorial-Starting-a-New-Project.html">Starting a New Project</a></li><li><a href="tutorial-Creating-an-Animation.html">Creating an Animation</a></li><li><a href="tutorial-Creating-a-Character.html">Creating a Character</a></li><li><a href="tutorial-Creating-a-Tileset.html">Creating a Tileset</a></li><li><a href="tutorial-Creating-a-Board.html">Creating a Board</a></li><li><a href="tutorial-Creating-a-Board-Layer.html">Creating a Board Layer</a></li><li><a href="tutorial-Adding-a-Solid-Board-Vector.html">Adding a Solid Board Vector</a></li><li><a href="tutorial-Moving-between-Boards.html">Moving between Boards</a></li><li><a href="tutorial-Creating-an-NPC.html">Creating an NPC</a></li><li><a href="tutorial-Creating-a-Board-Sprite.html">Creating a Board Sprite</a></li><li><a href="tutorial-Creating-an-Inventory-Item.html">Creating an Inventory Item</a></li></ul></li><li><a href="tutorial-03-Programming-Guide.html">Programming Guide</a><ul><li><a href="tutorial-Introduction-to-JavaScript.html">Introduction to JavaScript</a></li><li><a href="tutorial-Asset-Management.html">Asset Management</a></li><li><a href="tutorial-Global-Variables.html">Global Variables</a></li><li><a href="tutorial-Working-with-Graphics.html">Working with Graphics</a></li><li><a href="tutorial-Working-with-Canvases.html">Working with Canvases</a></li><li><a href="tutorial-User-Input.html">User Input</a></li><li><a href="tutorial-File-Handling.html">File Handling</a></li></ul></li><li><a href="tutorial-04-Default-Systems.html">Default Systems</a><ul><li><a href="tutorial-Setting-up-the-Default-Systems.html">Setup Process</a></li><li><a href="tutorial-Title-Screen.html">Title Screen</a></li><li><a href="tutorial-Dialog-Window.html">Dialog Window</a></li><li><a href="tutorial-Battle-System.html">Battle System</a></li></ul></li><li><a href="tutorial-05-Example-Games.html">Example Games</a><ul><li><a href="tutorial-The-Vent.html">The Vent</a></li></ul></li><li><a href="tutorial-Home.html">Home</a></li><li><a href="tutorial-Tutorials.html">Tutorials</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Tutorial</p>
+                    <h1>Creating a Character</h1>
+                </header>
+                <section>
+
+<article>
+    <h1>Summary</h1>
+<p>In this part of the tutorial we will create our first character which the player will be controlling.</p>
+<p>Characters are made up of a number of simple stats, a profile image, and a set of animations for things like walking. You will also be introduced to the concept of activation and collision boxes.</p>
+<h1>Steps</h1>
+<p>To create a character go to <strong>File &gt; New &gt; New Character</strong>.</p>
+<p><img src="http://docsy-jekyll.org/tutorials/my_first_game/03_new_character/images/1.png" alt=""></p>
+<h2>Basic Stats</h2>
+<p>You should then be presented with the character editor. Using this you can set the character's basic stats, a profile image used in menu systems, battle systems, dialog boxes etc., and all the animations associated with them. Try setting some of the basic stats, then double click on the empty area to the left to set an image.</p>
+<p><img src="http://docsy-jekyll.org/tutorials/my_first_game/03_new_character/images/2.png" alt=""></p>
+<h2>Profile Picture</h2>
+<p>To set the profile image double click the box and goto <strong>Graphics</strong> and open the file &quot;herostance.png&quot;, this will be our character's profile picture.</p>
+<blockquote>
+<p>NOTE: you will need to have copied the Graphics folder from the demo as detailed in the last tutorial for this image to show up.</p>
+</blockquote>
+<p><img src="http://docsy-jekyll.org/tutorials/my_first_game/03_new_character/images/3.png" alt=""></p>
+<p><img src="http://docsy-jekyll.org/tutorials/my_first_game/03_new_character/images/4.png" alt=""></p>
+<h2>Animations</h2>
+<p>Now it is time to set an animation for our character, switch to the &quot;Animations&quot; tab and select the &quot;SOUTH&quot; entry. When you have that selected click on the folder button below it and set the matching animation you created in the last tutorial. You can even add your own animations with custom IDs for use in your game by using the new button right next to the open button.</p>
+<blockquote>
+<p>NOTE: the delete button can only be used on custom entries you cannot delete any of the default animations. You also need to ensure that you set animations for NORTH, SOUTH, EAST, and WEST for the engine!</p>
+</blockquote>
+<p><img src="http://docsy-jekyll.org/tutorials/my_first_game/03_new_character/images/5.png" alt=""></p>
+<p>Playing animations works in exactly the same way as the in animation editor, just click the play button and off it goes.</p>
+<h2>Activations and Collisions</h2>
+<p>At this point you might have noticed the yellow and red boxes surrounding the character these are the activation and collision boxes:</p>
+<ul>
+<li><strong>Activation (Yellow):</strong> This is used to trigger events, this might be something as simple as walking up to a door that can be opened.</li>
+<li><strong>Collision (Red):</strong> This is used to detect collisions with solid things e.g. a wall, and stops the player from moving through them.</li>
+</ul>
+<p>If the character's activation box intersects an object that is setup to respond to activations that may trigger an event. The same happens if the collision box hits something solid the character may be stopped.</p>
+<p>You can adjust the width and height of each box using the &quot;Properties&quot; tab settings. The offsets refer to how far they appear from the center of the characters animations.</p>
+<p><img src="http://docsy-jekyll.org/tutorials/my_first_game/03_new_character/images/6.png" alt=""></p>
+<h1>Challenge</h1>
+<blockquote>
+<p>Set the animations on the character for the NORTH, EAST, and WEST directions.</p>
+</blockquote>
+</article>
+
+</section>
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

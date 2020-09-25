@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Creating an Inventory Item</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                <div class="dropdown is-hoverable is-right">
+                    <a class="dropdown-trigger link">
+                        Tutorials
+                        <i class="fas fa-chevron-down fa-xs"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                        
+                            <a class="dropdown-item" href="tutorial-01-Getting-Started.html">
+                                Getting Started
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-02-Your-First-Game.html">
+                                Your First Game
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-03-Programming-Guide.html">
+                                Programming Guide
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-04-Default-Systems.html">
+                                Default Systems
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-05-Example-Games.html">
+                                Example Games
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-Home.html">
+                                Home
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-Tutorials.html">
+                                Tutorials
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar tutorials"
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-01-Getting-Started.html">Getting Started</a><ul><li><a href="tutorial-What-is-RPGWizard.html">What is RPGWizard</a></li><li><a href="tutorial-Trying-Out-the-Demo.html">Trying Out the Demo</a></li><li><a href="tutorial-FAQ.html">FAQ</a></li></ul></li><li><a href="tutorial-02-Your-First-Game.html">Your First Game</a><ul><li><a href="tutorial-Starting-a-New-Project.html">Starting a New Project</a></li><li><a href="tutorial-Creating-an-Animation.html">Creating an Animation</a></li><li><a href="tutorial-Creating-a-Character.html">Creating a Character</a></li><li><a href="tutorial-Creating-a-Tileset.html">Creating a Tileset</a></li><li><a href="tutorial-Creating-a-Board.html">Creating a Board</a></li><li><a href="tutorial-Creating-a-Board-Layer.html">Creating a Board Layer</a></li><li><a href="tutorial-Adding-a-Solid-Board-Vector.html">Adding a Solid Board Vector</a></li><li><a href="tutorial-Moving-between-Boards.html">Moving between Boards</a></li><li><a href="tutorial-Creating-an-NPC.html">Creating an NPC</a></li><li><a href="tutorial-Creating-a-Board-Sprite.html">Creating a Board Sprite</a></li><li><a href="tutorial-Creating-an-Inventory-Item.html">Creating an Inventory Item</a></li></ul></li><li><a href="tutorial-03-Programming-Guide.html">Programming Guide</a><ul><li><a href="tutorial-Introduction-to-JavaScript.html">Introduction to JavaScript</a></li><li><a href="tutorial-Asset-Management.html">Asset Management</a></li><li><a href="tutorial-Global-Variables.html">Global Variables</a></li><li><a href="tutorial-Working-with-Graphics.html">Working with Graphics</a></li><li><a href="tutorial-Working-with-Canvases.html">Working with Canvases</a></li><li><a href="tutorial-User-Input.html">User Input</a></li><li><a href="tutorial-File-Handling.html">File Handling</a></li></ul></li><li><a href="tutorial-04-Default-Systems.html">Default Systems</a><ul><li><a href="tutorial-Setting-up-the-Default-Systems.html">Setup Process</a></li><li><a href="tutorial-Title-Screen.html">Title Screen</a></li><li><a href="tutorial-Dialog-Window.html">Dialog Window</a></li><li><a href="tutorial-Battle-System.html">Battle System</a></li></ul></li><li><a href="tutorial-05-Example-Games.html">Example Games</a><ul><li><a href="tutorial-The-Vent.html">The Vent</a></li></ul></li><li><a href="tutorial-Home.html">Home</a></li><li><a href="tutorial-Tutorials.html">Tutorials</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Tutorial</p>
+                    <h1>Creating an Inventory Item</h1>
+                </header>
+                <section>
+
+<article>
+    <h1>Summary</h1>
+<p>In the last part of this tutorial series we will look at creating inventory items. An item can be placed in or removed from a character's inventory while the game is running. Certain item types can even be equipped to a character such as a sword, shield, and so on.</p>
+<h1>Steps</h1>
+<p>To create an item go to <strong>File &gt; New &gt; New Item</strong>.</p>
+<p><img src="http://docsy-jekyll.org/tutorials/my_first_game/11_new_item/images/1.png" alt=""></p>
+<p>The item editor is very simple and relatively straight forward to use. You can set a name, an image (which can be set using a double-click), slot type, sellable price, and a few default effects to apply when equipped. When an item is equipped you can update the character stance to reflect this if you wish. There are a few basic slots that the item type can be set to:</p>
+<ul>
+<li><strong>Default Slots:</strong> chest, boots, gloves, head, right-hand, left-hand</li>
+</ul>
+<h2>Equipping an Item</h2>
+<p>To use an item in the engine you need to give it to a character, which involves loading it into the engine like any other asset. In the below code example we load up an item file and equip it to the character's right-hand slot. When we equip the item we remove it from the character's inventory, likewise when place it back into the inventory when removing it from the right-hand slot:</p>
+<pre class="prettyprint source lang-javascript"><code>// Part 1: Load the item.
+var itemFile = &quot;dragon_sword.item&quot;;
+rpgcode.giveItem(itemFile, &quot;Hero&quot;, function() {
+
+	// Part 2: Access the character's inventory and log the number of them.
+	var character = rpgcode.getCharacter(&quot;Hero&quot;);
+	rpcode.log(&quot;Number of itemFile=[&quot; + itemFile + &quot;in inventory count=[&quot; + character.inventory[itemFile].length + &quot;]&quot;);
+
+	// Part 3: Equip the item, available slots are (chest, boots, gloves, head, right-hand, left-hand).
+	character.equipment[&quot;right-hand&quot;] = character.inventory[itemFile][0];
+
+	// Part 4: Removes one of requested items from character's inventory.
+	rpgcode.takeItem(itemFile, &quot;Hero&quot;);
+
+	// Part 5: Unequip the item.
+	var item = character.equipment[&quot;right-hand&quot;];
+	character.inventory[itemFile].push(item);
+	character.equipment[&quot;right-hand&quot;] = &quot;&quot;;
+
+	rpgcode.endProgram();
+
+});
+</code></pre>
+<h1>Challenge</h1>
+<blockquote>
+<p>You have completed the basic tutorial on how to make a game with the RPGWizard. The next set of tutorials will build upon what you've learned here and teach you how to bring your game to life with code.</p>
+</blockquote>
+</article>
+
+</section>
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

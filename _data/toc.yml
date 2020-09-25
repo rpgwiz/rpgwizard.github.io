@@ -1,0 +1,11 @@
+- links:
+    - title: "News"
+      url: "news"
+    - title: "Features"
+      url: "features"
+    - title: "Documentation"
+      url: "assets/docs/v1/index.html"
+    - title: "Community"
+      url: "community"
+    - title: "About"
+      url: "about"

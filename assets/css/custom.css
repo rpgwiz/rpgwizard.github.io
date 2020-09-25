@@ -1,0 +1,43 @@
+---
+layout: null
+excluded_in_search: true
+---
+
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i";
+@fa-font-path: "../webfonts";
+
+.banner {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem
+}
+
+.banner-heading {
+    color: inherit
+}
+
+.banner-link {
+    font-weight: 700
+}
+
+.banner-dismissible {
+    padding-right: 4rem
+}
+
+.banner-dismissible .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .75rem 1.25rem;
+    color: inherit
+}
+
+.banner-primary {
+    color: #fff;
+}
+
+.banner-primary hr {
+    border-top-color: #fff
+}

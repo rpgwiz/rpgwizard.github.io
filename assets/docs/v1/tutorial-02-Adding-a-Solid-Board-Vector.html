@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Adding a Solid Board Vector</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                <div class="dropdown is-hoverable is-right">
+                    <a class="dropdown-trigger link">
+                        Tutorials
+                        <i class="fas fa-chevron-down fa-xs"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                        
+                            <a class="dropdown-item" href="tutorial-01-Getting-Started.html">
+                                Getting Started
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-02-Your-First-Game.html">
+                                Your First Game
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-03-Programming-Guide.html">
+                                Programming Guide
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-04-Default-Systems.html">
+                                Default Systems
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-05-Example-Games.html">
+                                Example Games
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar tutorials"
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-01-Getting-Started.html">Getting Started</a><ul><li><a href="tutorial-01-What-is-RPGWizard.html">What is RPGWizard</a></li><li><a href="tutorial-01-Trying-Out-the-Demo.html">Trying Out the Demo</a></li><li><a href="tutorial-01-FAQ.html">FAQ</a></li></ul></li><li><a href="tutorial-02-Your-First-Game.html">Your First Game</a><ul><li><a href="tutorial-02-Starting-a-New-Project.html">Starting a New Project</a></li><li><a href="tutorial-02-Creating-an-Animation.html">Creating an Animation</a></li><li><a href="tutorial-02-Creating-a-Character.html">Creating a Character</a></li><li><a href="tutorial-02-Creating-a-Tileset.html">Creating a Tileset</a></li><li><a href="tutorial-02-Creating-a-Board.html">Creating a Board</a></li><li><a href="tutorial-02-Creating-a-Board-Layer.html">Creating a Board Layer</a></li><li><a href="tutorial-02-Adding-a-Solid-Board-Vector.html">Adding a Solid Board Vector</a></li><li><a href="tutorial-02-Moving-between-Boards.html">Moving between Boards</a></li><li><a href="tutorial-02-Creating-an-NPC.html">Creating an NPC</a></li><li><a href="tutorial-02-Creating-a-Board-Sprite.html">Creating a Board Sprite</a></li><li><a href="tutorial-02-Creating-an-Inventory-Item.html">Creating an Inventory Item</a></li></ul></li><li><a href="tutorial-03-Programming-Guide.html">Programming Guide</a><ul><li><a href="tutorial-03-Introduction-to-JavaScript.html">Introduction to JavaScript</a></li><li><a href="tutorial-03-Asset-Management.html">Asset Management</a></li><li><a href="tutorial-03-Global-Variables.html">Global Variables</a></li><li><a href="tutorial-03-Working-with-Graphics.html">Working with Graphics</a></li><li><a href="tutorial-03-Working-with-Canvases.html">Working with Canvases</a></li><li><a href="tutorial-03-User-Input.html">User Input</a></li><li><a href="tutorial-03-File-Handling.html">File Handling</a></li></ul></li><li><a href="tutorial-04-Default-Systems.html">Default Systems</a><ul><li><a href="tutorial-04-Setting-up-the-Default-Systems.html">Setup Process</a></li><li><a href="tutorial-04-Title-Screen.html">Title Screen</a></li><li><a href="tutorial-04-Dialog-Window.html">Dialog Window</a></li><li><a href="tutorial-04-Battle-System.html">Battle System</a></li></ul></li><li><a href="tutorial-05-Example-Games.html">Example Games</a><ul><li><a href="tutorial-05-The-Vent.html">The Vent</a></li></ul></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Tutorial</p>
+                    <h1>Adding a Solid Board Vector</h1>
+                </header>
+                <section>
+
+<article>
+    <h1>Summary</h1>
+<p>In this part of the tutorial we will be looking at adding solid board vectors. A solid board vector is a polygon that represents an impassable area or object. Up until this point in all your play testing you would have been able to walk through walls and pillars. Board vectors are what the RPGWizard uses for its collision detection and can be used to stop a character or an NPC from going somewhere they should not be able to.</p>
+<h1>Steps</h1>
+<p>A board vector is made up of series of connected lines which can be drawn in area or free form mode, we'll be using the area version. For this tutorial we are going to snap them to a grid to make it easier for drawing the shapes we need, so go to <strong>View &gt; Snap to Grid</strong>.</p>
+<p><img src="images/my_first_game/07_new_vector/images/1.png" alt=""></p>
+<p>Now select the area vector tool from the main toolbar:</p>
+<p><img src="images/my_first_game/07_new_vector/images/2.png" alt=""></p>
+<p>To start drawing a board vector simply left click and drag it to expand the area it covers. All vector drawing is controlled using the 3 mouse buttons which are:</p>
+<ul>
+<li><strong>Left Click:</strong> Start drawing a vector from the mouse's (x, y) position to our next left click.</li>
+<li><strong>Right Click:</strong> Stop drawing a vector, or select a vector if we aren't drawing one.</li>
+<li><strong>Middle Click:</strong> Removes the selected vector from the board.</li>
+</ul>
+<p>Now start by drawing a square around the base of the pillars, but make sure that you have the floor layer selected while doing this as board vectors exist on a per layer basis. This means your character can only collide with vectors on the same layer as them.</p>
+<p><img src="images/my_first_game/07_new_vector/images/3.png" alt=""></p>
+<p>After you have drawn a square around the base of one of the pillars <strong>right click to finish it</strong>, then right click it again to select it. A selected board vector is visually thicker, when you have it selected switch to the properties tab.</p>
+<p><img src="images/my_first_game/07_new_vector/images/4.png" alt=""></p>
+<h1>Challenge</h1>
+<blockquote>
+<p>Finish off the vectors for the other pillar and walls. When you play your game you should no longer be able to pass through them.</p>
+</blockquote>
+<p><img src="images/my_first_game/07_new_vector/images/5.png" alt=""></p>
+</article>
+
+</section>
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>

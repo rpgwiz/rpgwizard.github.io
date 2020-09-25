@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Creating a Board Sprite</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                <div class="dropdown is-hoverable is-right">
+                    <a class="dropdown-trigger link">
+                        Tutorials
+                        <i class="fas fa-chevron-down fa-xs"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                        
+                            <a class="dropdown-item" href="tutorial-01-Getting-Started.html">
+                                Getting Started
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-02-Your-First-Game.html">
+                                Your First Game
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-03-Programming-Guide.html">
+                                Programming Guide
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-04-Default-Systems.html">
+                                Default Systems
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-05-Example-Games.html">
+                                Example Games
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar tutorials"
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-01-Getting-Started.html">Getting Started</a><ul><li><a href="tutorial-01-What-is-RPGWizard.html">What is RPGWizard</a></li><li><a href="tutorial-01-Trying-Out-the-Demo.html">Trying Out the Demo</a></li><li><a href="tutorial-01-FAQ.html">FAQ</a></li></ul></li><li><a href="tutorial-02-Your-First-Game.html">Your First Game</a><ul><li><a href="tutorial-02-Starting-a-New-Project.html">Starting a New Project</a></li><li><a href="tutorial-02-Creating-an-Animation.html">Creating an Animation</a></li><li><a href="tutorial-02-Creating-a-Character.html">Creating a Character</a></li><li><a href="tutorial-02-Creating-a-Tileset.html">Creating a Tileset</a></li><li><a href="tutorial-02-Creating-a-Board.html">Creating a Board</a></li><li><a href="tutorial-02-Creating-a-Board-Layer.html">Creating a Board Layer</a></li><li><a href="tutorial-02-Adding-a-Solid-Board-Vector.html">Adding a Solid Board Vector</a></li><li><a href="tutorial-02-Moving-between-Boards.html">Moving between Boards</a></li><li><a href="tutorial-02-Creating-an-NPC.html">Creating an NPC</a></li><li><a href="tutorial-02-Creating-a-Board-Sprite.html">Creating a Board Sprite</a></li><li><a href="tutorial-02-Creating-an-Inventory-Item.html">Creating an Inventory Item</a></li></ul></li><li><a href="tutorial-03-Programming-Guide.html">Programming Guide</a><ul><li><a href="tutorial-03-Introduction-to-JavaScript.html">Introduction to JavaScript</a></li><li><a href="tutorial-03-Asset-Management.html">Asset Management</a></li><li><a href="tutorial-03-Global-Variables.html">Global Variables</a></li><li><a href="tutorial-03-Working-with-Graphics.html">Working with Graphics</a></li><li><a href="tutorial-03-Working-with-Canvases.html">Working with Canvases</a></li><li><a href="tutorial-03-User-Input.html">User Input</a></li><li><a href="tutorial-03-File-Handling.html">File Handling</a></li></ul></li><li><a href="tutorial-04-Default-Systems.html">Default Systems</a><ul><li><a href="tutorial-04-Setting-up-the-Default-Systems.html">Setup Process</a></li><li><a href="tutorial-04-Title-Screen.html">Title Screen</a></li><li><a href="tutorial-04-Dialog-Window.html">Dialog Window</a></li><li><a href="tutorial-04-Battle-System.html">Battle System</a></li></ul></li><li><a href="tutorial-05-Example-Games.html">Example Games</a><ul><li><a href="tutorial-05-The-Vent.html">The Vent</a></li></ul></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Tutorial</p>
+                    <h1>Creating a Board Sprite</h1>
+                </header>
+                <section>
+
+<article>
+    <h1>Summary</h1>
+<p>In this part of the tutorial series we will look add adding a board sprite. A board sprite is an instance of an NPC on a board. We will be using the Evil Eye NPC from the previous tutorial. By the end of this we will have an Evil Eye that follows the character around the hall board.</p>
+<h1>Steps</h1>
+<p>Open the &quot;hall.board&quot; that you've created and select the board sprite tool from the main toolbar.</p>
+<p><img src="images/my_first_game/10_adding_board_sprites/images/1.png" alt=""></p>
+<p>The board sprite tool shares the same set of mouse commands as the board vector tool. Left click to place a board sprite, right click to select it, and middle click to remove it from the board. When you place a board sprite it appears as a blank box as it has no associated NPC file.</p>
+<p><img src="images/my_first_game/10_adding_board_sprites/images/2.png" alt=""></p>
+<h2>Setting the Sprite File</h2>
+<p>Select the newly placed board sprite and go to the &quot;Properties&quot; tab. Use the drop down box to select the source sprite file of our NPC. Then replace the randomly generated ID with the text &quot;evil-eye-1&quot;, we will use this ID later to refer to the board sprite in our code.</p>
+<p><img src="images/my_first_game/10_adding_board_sprites/images/3.png" alt="">
+<img src="images/my_first_game/10_adding_board_sprites/images/4.png" alt=""></p>
+<p>If you play the game now and walk into the room with sprite you'll notice that is just sits there. Like activation vectors board sprites don't interact with the character unless they are told to. We are now going to add a simple program to the sprite to have it follow the character around the board. Go to <strong>File &gt; New -&gt; New Program</strong>.</p>
+<p><img src="images/my_first_game/10_adding_board_sprites/images/5.png" alt=""></p>
+<h2>Sprite Movement</h2>
+<p>In order to bring the board sprite to life we are going to need to copy the chuck of code below into the code editor. Don't worry you don't need to understand it for this tutorial series. In simple terms it uses the characters current location to calculate how far it has to move to get closer. When you've copied this code save it to a file called &quot;evil_eye.js&quot;.</p>
+<pre class="prettyprint source lang-javascript"><code>// Get the player's current location on the screen.
+var inPixels = false;
+var location = rpgcode.getCharacterLocation(inPixels);
+
+// Are we on the same layer?
+if (location.layer === this.layer) {
+        // Calculate the distance to the character.
+        var a = location.x - this.x;
+        var b = location.y - this.y;
+        var distance = Math.sqrt(a * a + b * b); // Simple Pythagora's theorem.
+
+        // Are we less than 160 pixels away and no closer than 32 pixels?
+        if (32 &lt; distance && distance &lt; 160) {
+            // Get the angle between us and the character in degrees.
+            var dx = location.x - this.x;
+            var dy = location.y - this.y;
+            var angle = Math.atan2(dy, dx);
+
+            // How fast are we going to approach the character.
+            var velocity = 1.25;
+
+            // Calculate a shift in our (x, y) that will bring us closer.
+            var velocityX = velocity * Math.cos(angle);
+            var velocityY = velocity * Math.sin(angle);
+
+            // Move towards the character for 50 milliseconds, this will animate the sprite.
+            rpgcode.moveSpriteTo(this.sprite.id, this.x + velocityX, this.y + velocityY, 50);
+        }
+}
+</code></pre>
+<p>Now we'll attach it to the board sprite by setting its &quot;Thread&quot; property. The program we set here will be called every game frame and will progressively move the board sprite closer to the character if they are within about 5 tiles. If you start the game again the board sprite should slowly approach.</p>
+<p><img src="images/my_first_game/10_adding_board_sprites/images/7.png" alt=""></p>
+<h1>Challenge</h1>
+<blockquote>
+<p>Try experimenting with the variables in the simple character tracking program. See if you can make the NPC move faster or approach from a greater distance!</p>
+</blockquote>
+</article>
+
+</section>
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+</body>
+</html>
