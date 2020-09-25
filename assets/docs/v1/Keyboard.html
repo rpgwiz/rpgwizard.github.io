@@ -40,6 +40,10 @@
         </a>
         <div class="logo">
             
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">RPGWizard Documentation</h1>
+                </a>
             
         </div>
         <div class="menu">
@@ -96,9 +100,13 @@
             id="sidebarNav"
         >
             
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Namespaces</h3><ul><li><a href="Asset.html">Asset</a></li><li><a href="Board.html">Board</a></li><li><a href="Canvas.html">Canvas</a></li><li><a href="Character.html">Character</a></li><li><a href="Draw2D.html">Draw2D</a></li><li><a href="File.html">File</a></li><li><a href="Geometry.html">Geometry</a></li><li><a href="Global_.html">Global</a></li><li><a href="Image.html">Image</a></li><li><a href="Item.html">Item</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="Program.html">Program</a></li><li><a href="Sound.html">Sound</a></li><li><a href="Sprite.html">Sprite</a></li><li><a href="Text.html">Text</a></li><li><a href="Util.html">Util</a></li></ul><h3>Classes</h3><ul><li><a href="RPGcode.html">RPGcode</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Namespaces</h3><ul><li><a href="Asset.html">Asset</a></li><li><a href="Board.html">Board</a></li><li><a href="Canvas.html">Canvas</a></li><li><a href="Character.html">Character</a></li><li><a href="Draw2D.html">Draw2D</a></li><li><a href="File.html">File</a></li><li><a href="Geometry.html">Geometry</a></li><li><a href="Global_.html">Global</a></li><li><a href="Image.html">Image</a></li><li><a href="Item.html">Item</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="Program.html">Program</a></li><li><a href="Sound.html">Sound</a></li><li><a href="Sprite.html">Sprite</a></li><li><a href="Text.html">Text</a></li><li><a href="Util.html">Util</a></li></ul><h3>Classes</h3><ul><li><a href="Battle.html">Battle</a></li><li><a href="Dialog.html">Dialog</a></li><li><a href="HUD.html">HUD</a></li><li><a href="Inventory.html">Inventory</a></li><li><a href="RPGcode.html">RPGcode</a></li><li><a href="TitleScreen.html">TitleScreen</a></li><li><a href="Weather.html">Weather</a></li></ul></div>
                 
             </nav>
         </div>
@@ -165,7 +173,7 @@
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line24">line 24</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line27">line 27</a>
             </span>
         </p>
     
@@ -204,7 +212,7 @@
         
         <span class="code-name">
             
-                registerKeyDown<span class="signature">(key, callback, globalScope)</span><span class="type-signature"></span>
+                registerKeyDown<span class="signature">(key, callback, globalScope<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -242,7 +250,11 @@ is unregistered.
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -261,14 +273,26 @@ is unregistered.
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The key to listen to.</td>
@@ -293,7 +317,19 @@ is unregistered.
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The callback function to invoke when the keyDown event fires.</td>
@@ -311,14 +347,30 @@ is unregistered.
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
   
 
   <td class="description last">Is this for use outside of the program itself?</td>
@@ -369,7 +421,7 @@ is unregistered.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2186">line 2186</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2200">line 2200</a>
             </span>
         </p>
     
@@ -415,7 +467,7 @@ is unregistered.
         
         <span class="code-name">
             
-                registerKeyUp<span class="signature">(key, callback, globalScope)</span><span class="type-signature"></span>
+                registerKeyUp<span class="signature">(key, callback, globalScope<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -453,7 +505,11 @@ is unregistered.
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -472,14 +528,26 @@ is unregistered.
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The key to listen to.</td>
@@ -504,7 +572,19 @@ is unregistered.
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The callback function to invoke when the keyUp event fires.</td>
@@ -522,14 +602,30 @@ is unregistered.
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
   
 
   <td class="description last">Is this for use outside of the program itself?</td>
@@ -580,7 +676,7 @@ is unregistered.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2212">line 2212</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2226">line 2226</a>
             </span>
         </p>
     
@@ -626,7 +722,7 @@ is unregistered.
         
         <span class="code-name">
             
-                unregisterKeyDown<span class="signature">(key, globalScope)</span><span class="type-signature"></span>
+                unregisterKeyDown<span class="signature">(key, globalScope<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -660,7 +756,11 @@ is unregistered.
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -679,14 +779,26 @@ is unregistered.
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The key associated with the listener.</td>
@@ -704,14 +816,30 @@ is unregistered.
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
   
 
   <td class="description last">Is this a global scope key down handler.</td>
@@ -762,7 +890,7 @@ is unregistered.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3136">line 3136</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3152">line 3152</a>
             </span>
         </p>
     
@@ -806,7 +934,7 @@ is unregistered.
         
         <span class="code-name">
             
-                unregisterKeyUp<span class="signature">(key, globalScope)</span><span class="type-signature"></span>
+                unregisterKeyUp<span class="signature">(key, globalScope<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -840,7 +968,11 @@ is unregistered.
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -859,14 +991,26 @@ is unregistered.
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The key associated with the listener.</td>
@@ -884,14 +1028,30 @@ is unregistered.
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
   
 
   <td class="description last">Is this a global scope key up handler.</td>
@@ -942,7 +1102,7 @@ is unregistered.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3155">line 3155</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3171">line 3171</a>
             </span>
         </p>
     
@@ -1010,6 +1170,8 @@ is unregistered.
 <script src="scripts/app.min.js"></script>
 <script>PR.prettyPrint();</script>
 <script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
 
 </body>
 </html>

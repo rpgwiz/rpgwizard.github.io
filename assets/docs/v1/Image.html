@@ -40,6 +40,10 @@
         </a>
         <div class="logo">
             
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">RPGWizard Documentation</h1>
+                </a>
             
         </div>
         <div class="menu">
@@ -96,9 +100,13 @@
             id="sidebarNav"
         >
             
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Namespaces</h3><ul><li><a href="Asset.html">Asset</a></li><li><a href="Board.html">Board</a></li><li><a href="Canvas.html">Canvas</a></li><li><a href="Character.html">Character</a></li><li><a href="Draw2D.html">Draw2D</a></li><li><a href="File.html">File</a></li><li><a href="Geometry.html">Geometry</a></li><li><a href="Global_.html">Global</a></li><li><a href="Image.html">Image</a></li><li><a href="Item.html">Item</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="Program.html">Program</a></li><li><a href="Sound.html">Sound</a></li><li><a href="Sprite.html">Sprite</a></li><li><a href="Text.html">Text</a></li><li><a href="Util.html">Util</a></li></ul><h3>Classes</h3><ul><li><a href="RPGcode.html">RPGcode</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Namespaces</h3><ul><li><a href="Asset.html">Asset</a></li><li><a href="Board.html">Board</a></li><li><a href="Canvas.html">Canvas</a></li><li><a href="Character.html">Character</a></li><li><a href="Draw2D.html">Draw2D</a></li><li><a href="File.html">File</a></li><li><a href="Geometry.html">Geometry</a></li><li><a href="Global_.html">Global</a></li><li><a href="Image.html">Image</a></li><li><a href="Item.html">Item</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="Program.html">Program</a></li><li><a href="Sound.html">Sound</a></li><li><a href="Sprite.html">Sprite</a></li><li><a href="Text.html">Text</a></li><li><a href="Util.html">Util</a></li></ul><h3>Classes</h3><ul><li><a href="Battle.html">Battle</a></li><li><a href="Dialog.html">Dialog</a></li><li><a href="HUD.html">HUD</a></li><li><a href="Inventory.html">Inventory</a></li><li><a href="RPGcode.html">RPGcode</a></li><li><a href="TitleScreen.html">TitleScreen</a></li><li><a href="Weather.html">Weather</a></li></ul></div>
                 
             </nav>
         </div>
@@ -165,7 +173,7 @@
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line21">line 21</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line24">line 24</a>
             </span>
         </p>
     
@@ -204,7 +212,7 @@
         
         <span class="code-name">
             
-                addLayerImage<span class="signature">(image, layer)</span><span class="type-signature"> &rarr; {undefined}</span>
+                addLayerImage<span class="signature">(image, layer)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -285,7 +293,7 @@ Note: Layers images added this way will be lost the moment the board is reloaded
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
@@ -343,7 +351,7 @@ Note: Layers images added this way will be lost the moment the board is reloaded
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line192">line 192</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line194">line 194</a>
             </span>
         </p>
     
@@ -365,29 +373,6 @@ Note: Layers images added this way will be lost the moment the board is reloaded
 
 
 
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">undefined</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
 
 
 
@@ -417,7 +402,7 @@ rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current boa
         
         <span class="code-name">
             
-                drawImage<span class="signature">(fileName, x, y, width, height, rotation, canvasId)</span><span class="type-signature"></span>
+                drawImage<span class="signature">(fileName, x, y, width, height, rotation, canvasId<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -426,7 +411,7 @@ rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current boa
     
     
     <div class="description">
-        Draws an image on the canvas specified or the default if none.
+        Draws an image onto a canvas, if no canvas is specified the default canvas will be used.
     </div>
     
 
@@ -451,7 +436,11 @@ rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current boa
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -470,14 +459,26 @@ rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current boa
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The relative path to the image.</td>
@@ -495,14 +496,26 @@ rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current boa
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The start position x in pixels.</td>
@@ -520,14 +533,26 @@ rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current boa
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The start position y in pixels.</td>
@@ -545,14 +570,26 @@ rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current boa
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">In pixels.</td>
@@ -570,14 +607,26 @@ rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current boa
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">In pixels.</td>
@@ -595,14 +644,26 @@ rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current boa
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">In radians.</td>
@@ -620,14 +681,30 @@ rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current boa
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          renderNowCanvas
+      
+      </td>
   
 
   <td class="description last">The ID of the canvas to put the image on.</td>
@@ -678,7 +755,7 @@ rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current boa
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line629">line 629</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line631">line 631</a>
             </span>
         </p>
     
@@ -707,8 +784,11 @@ rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current boa
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Draw the image on the smaller canvas.
-rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
+        <pre class="prettyprint"><code>// Draw the image onto the default canvas.
+rpgcode.drawImage("life.png", 0, 0, 32, 32, 0);
+
+// Draw the image onto the canvas we specified.
+rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "myCanvas");</code></pre>
     
 
 
@@ -723,7 +803,7 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
         
         <span class="code-name">
             
-                drawImagePart<span class="signature">(fileName, srcX, srcY, srcWidth, srcHeight, destX, destY, destWidth, destHeight, rotation, canvasId)</span><span class="type-signature"></span>
+                drawImagePart<span class="signature">(fileName, srcX, srcY, srcWidth, srcHeight, destX, destY, destWidth, destHeight, rotation, canvasId<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -732,7 +812,7 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
     
     
     <div class="description">
-        Draws part of an image on the canvas specified or the default if none.
+        Draws part of image an onto a canvas, if no canvas is specified the default canvas will be used.
     </div>
     
 
@@ -757,7 +837,11 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -776,14 +860,26 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The relative path to the image.</td>
@@ -801,14 +897,26 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The start position x in pixels from the source image.</td>
@@ -826,14 +934,26 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The start position y in pixels from the source image.</td>
@@ -851,14 +971,26 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">In pixels from the source image.</td>
@@ -876,14 +1008,26 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">In pixels from the source image.</td>
@@ -901,14 +1045,26 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The start position x in pixels on the destination canvas.</td>
@@ -926,14 +1082,26 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The start position y in pixels on the destination canvas.</td>
@@ -951,14 +1119,26 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">In pixels on the destination canvas.</td>
@@ -976,14 +1156,26 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">In pixels on the destination canvas.</td>
@@ -1001,14 +1193,26 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">In radians.</td>
@@ -1026,14 +1230,30 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          renderNowCanvas
+      
+      </td>
   
 
   <td class="description last">The ID of the canvas to put the image on.</td>
@@ -1084,7 +1304,7 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line682">line 682</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line687">line 687</a>
             </span>
         </p>
     
@@ -1113,8 +1333,11 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "canvasId");</code></pre>
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Set part of the image onto the smaller canvas.
-rpgcode.drawImagePart("objects.png", 64, 0, 16, 16, 8, 8, 16, 16, 0, "canvasId");</code></pre>
+        <pre class="prettyprint"><code>// Draw part of the image onto the default canvas.
+rpgcode.drawImagePart("objects.png", 64, 0, 16, 16, 8, 8, 16, 16, 0);
+
+// Draw part of the image onto the canvas we specified.
+rpgcode.drawImagePart("objects.png", 64, 0, 16, 16, 8, 8, 16, 16, 0, "myCanvas");</code></pre>
     
 
 
@@ -1129,7 +1352,7 @@ rpgcode.drawImagePart("objects.png", 64, 0, 16, 16, 8, 8, 16, 16, 0, "canvasId")
         
         <span class="code-name">
             
-                getImage<span class="signature">(fileName)</span><span class="type-signature"> &rarr; {Object}</span>
+                getImage<span class="signature">(fileName)</span><span class="type-signature"> &rarr; {<a href="Image.html#.ImageInfo">Image.ImageInfo</a>}</span>
             
         </span>
     </h4>
@@ -1183,7 +1406,7 @@ it returns undefined.
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
@@ -1241,7 +1464,7 @@ it returns undefined.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1455">line 1455</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1464">line 1464</a>
             </span>
         </p>
     
@@ -1272,13 +1495,13 @@ it returns undefined.
 
 <div class="columns">
     
-    <div class='param-desc column is-7'>Image object or undefined if none available.</div>
+    <div class='param-desc column is-7'>An object containing information about the image.</div>
     
     
     <div class='column is-5 has-text-left'>
         <label>Type: </label>
         
-<span class="param-type">Object</span>
+<span class="param-type"><a href="Image.html#.ImageInfo">Image.ImageInfo</a></span>
 
 
     </div>
@@ -1313,7 +1536,7 @@ rpgcode.log(image.height);</code></pre>
         
         <span class="code-name">
             
-                removeLayerImage<span class="signature">(id, layer)</span><span class="type-signature"> &rarr; {undefined}</span>
+                removeLayerImage<span class="signature">(id, layer)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -1367,7 +1590,7 @@ not exist on the layer then there is no effect.
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
@@ -1392,7 +1615,7 @@ not exist on the layer then there is no effect.
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
@@ -1450,7 +1673,7 @@ not exist on the layer then there is no effect.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2473">line 2473</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2487">line 2487</a>
             </span>
         </p>
     
@@ -1472,29 +1695,6 @@ not exist on the layer then there is no effect.
 
 
 
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">undefined</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
 
 
 
@@ -1575,7 +1775,7 @@ not exist on the layer then there is no effect.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2733">line 2733</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2752">line 2752</a>
             </span>
         </p>
     
@@ -1670,7 +1870,7 @@ not exist on the layer then there is no effect.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2742">line 2742</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2761">line 2761</a>
             </span>
         </p>
     
@@ -1707,7 +1907,7 @@ not exist on the layer then there is no effect.
         
         <span class="code-name">
             
-                updateLayerImage<span class="signature">(image, layer)</span><span class="type-signature"> &rarr; {undefined}</span>
+                updateLayerImage<span class="signature">(image, layer)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -1786,7 +1986,7 @@ not exist on the layer then there is no effect.
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
@@ -1844,7 +2044,7 @@ not exist on the layer then there is no effect.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3298">line 3298</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3308">line 3308</a>
             </span>
         </p>
     
@@ -1866,29 +2066,6 @@ not exist on the layer then there is no effect.
 
 
 
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">undefined</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
 
 
 
@@ -1913,6 +2090,161 @@ rpgcode.updateLayerImage(image, 1); // Update the image with ID "battle.backgrou
         </div>
     
 
+    
+        <div class='vertical-section'>
+            <h1>Type Definitions</h1>
+            <div class="members">
+            
+                <div class="member">
+
+    <span class="method-parameter is-pulled-right">
+        <label>Type:</label>
+        
+<span class="param-type">Object</span>
+
+
+    </span>
+
+<h4 class="name" id=".ImageInfo">
+    <a class="href-link" href="#.ImageInfo">#</a>
+    
+    <span class="code-name">
+        ImageInfo
+    </span>
+    
+</h4>
+
+
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+<div class="table-container">
+    <table class="props table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>width</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">number</span>
+
+
+    
+    </td>
+
+    
+
+    
+
+    <td class="description last"></td>
+</tr>
+
+        
+            
+<tr class="deep-level-0">
+    
+        <td class="name"><code>height</code></td>
+    
+
+    <td class="type">
+    
+        
+<span class="param-type">number</span>
+
+
+    
+    </td>
+
+    
+
+    
+
+    <td class="description last"></td>
+</tr>
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="rpgcode.js.html" class="button">View Source</a>
+            <span>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3396">line 3396</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+</div>
+            
+            </div>
+        </div>
     
 
     
@@ -1942,6 +2274,8 @@ rpgcode.updateLayerImage(image, 1); // Update the image with ID "battle.backgrou
 <script src="scripts/app.min.js"></script>
 <script>PR.prettyPrint();</script>
 <script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
 
 </body>
 </html>

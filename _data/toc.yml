@@ -5,6 +5,7 @@
       url: "features"
     - title: "Documentation"
       url: "assets/docs/v1/index.html"
+      target: "_blank"
     - title: "Community"
       url: "community"
     - title: "About"

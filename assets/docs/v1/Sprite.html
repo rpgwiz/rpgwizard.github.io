@@ -40,6 +40,10 @@
         </a>
         <div class="logo">
             
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">RPGWizard Documentation</h1>
+                </a>
             
         </div>
         <div class="menu">
@@ -96,9 +100,13 @@
             id="sidebarNav"
         >
             
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Namespaces</h3><ul><li><a href="Asset.html">Asset</a></li><li><a href="Board.html">Board</a></li><li><a href="Canvas.html">Canvas</a></li><li><a href="Character.html">Character</a></li><li><a href="Draw2D.html">Draw2D</a></li><li><a href="File.html">File</a></li><li><a href="Geometry.html">Geometry</a></li><li><a href="Global_.html">Global</a></li><li><a href="Image.html">Image</a></li><li><a href="Item.html">Item</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="Program.html">Program</a></li><li><a href="Sound.html">Sound</a></li><li><a href="Sprite.html">Sprite</a></li><li><a href="Text.html">Text</a></li><li><a href="Util.html">Util</a></li></ul><h3>Classes</h3><ul><li><a href="RPGcode.html">RPGcode</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Namespaces</h3><ul><li><a href="Asset.html">Asset</a></li><li><a href="Board.html">Board</a></li><li><a href="Canvas.html">Canvas</a></li><li><a href="Character.html">Character</a></li><li><a href="Draw2D.html">Draw2D</a></li><li><a href="File.html">File</a></li><li><a href="Geometry.html">Geometry</a></li><li><a href="Global_.html">Global</a></li><li><a href="Image.html">Image</a></li><li><a href="Item.html">Item</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="Program.html">Program</a></li><li><a href="Sound.html">Sound</a></li><li><a href="Sprite.html">Sprite</a></li><li><a href="Text.html">Text</a></li><li><a href="Util.html">Util</a></li></ul><h3>Classes</h3><ul><li><a href="Battle.html">Battle</a></li><li><a href="Dialog.html">Dialog</a></li><li><a href="HUD.html">HUD</a></li><li><a href="Inventory.html">Inventory</a></li><li><a href="RPGcode.html">RPGcode</a></li><li><a href="TitleScreen.html">TitleScreen</a></li><li><a href="Weather.html">Weather</a></li></ul></div>
                 
             </nav>
         </div>
@@ -165,7 +173,7 @@
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line16">line 16</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line19">line 19</a>
             </span>
         </p>
     
@@ -204,7 +212,7 @@
         
         <span class="code-name">
             
-                addSprite<span class="signature">(sprite, callback)</span><span class="type-signature"> &rarr; {undefined}</span>
+                addSprite<span class="signature">(sprite, callback)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -365,29 +373,6 @@ pickups or enemies.
 
 
 
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">undefined</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
-
 
 
 
@@ -483,7 +468,7 @@ available for the sprite.
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
@@ -508,7 +493,7 @@ available for the sprite.
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
@@ -692,7 +677,7 @@ rpgcode.animateSprite(spriteId, animationId, function() {
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
@@ -750,7 +735,7 @@ rpgcode.animateSprite(spriteId, animationId, function() {
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line560">line 560</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line559">line 559</a>
             </span>
         </p>
     
@@ -794,7 +779,7 @@ rpgcode.animateSprite(spriteId, animationId, function() {
         
         <span class="code-name">
             
-                getSprite<span class="signature">(spriteId)</span><span class="type-signature"> &rarr; {Entity}</span>
+                getSprite<span class="signature">(spriteId)</span><span class="type-signature"> &rarr; {<a href="Asset.html#.Sprite">Asset.Sprite</a>}</span>
             
         </span>
     </h4>
@@ -847,7 +832,7 @@ rpgcode.animateSprite(spriteId, animationId, function() {
   <td class="type">
   
       
-<span class="param-type">type</span>
+<span class="param-type">string</span>
 
 
   
@@ -905,7 +890,7 @@ rpgcode.animateSprite(spriteId, animationId, function() {
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1581">line 1581</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1590">line 1590</a>
             </span>
         </p>
     
@@ -940,7 +925,7 @@ rpgcode.animateSprite(spriteId, animationId, function() {
     <div class='column is-5 has-text-left'>
         <label>Type: </label>
         
-<span class="param-type">Entity</span>
+<span class="param-type"><a href="Asset.html#.Sprite">Asset.Sprite</a></span>
 
 
     </div>
@@ -972,7 +957,7 @@ rpgcode.animateSprite(spriteId, animationId, function() {
         
         <span class="code-name">
             
-                getSpriteDirection<span class="signature">(spriteId)</span><span class="type-signature"> &rarr; {String}</span>
+                getSpriteDirection<span class="signature">(spriteId)</span><span class="type-signature"> &rarr; {"NORTH"|"SOUTH"|"EAST"|"WEST"|"NORTH_EAST"|"SOUTH_EAST"|"NORTH_WEST"|"SOUTH_WEST"}</span>
             
         </span>
     </h4>
@@ -982,9 +967,6 @@ rpgcode.animateSprite(spriteId, animationId, function() {
     
     <div class="description">
         Gets the sprites's current direction.
-
-var direction = rpgcode.getSpriteDirection();
-rpgcode.log(direction);
     </div>
     
 
@@ -1028,7 +1010,7 @@ rpgcode.log(direction);
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
@@ -1086,7 +1068,7 @@ rpgcode.log(direction);
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1596">line 1596</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1606">line 1606</a>
             </span>
         </p>
     
@@ -1117,13 +1099,32 @@ rpgcode.log(direction);
 
 <div class="columns">
     
-    <div class='param-desc column is-7'>A NORTH, SOUTH, EAST, or WEST value.</div>
-    
     
     <div class='column is-5 has-text-left'>
         <label>Type: </label>
         
-<span class="param-type">String</span>
+<span class="param-type">"NORTH"</span>
+|
+
+<span class="param-type">"SOUTH"</span>
+|
+
+<span class="param-type">"EAST"</span>
+|
+
+<span class="param-type">"WEST"</span>
+|
+
+<span class="param-type">"NORTH_EAST"</span>
+|
+
+<span class="param-type">"SOUTH_EAST"</span>
+|
+
+<span class="param-type">"NORTH_WEST"</span>
+|
+
+<span class="param-type">"SOUTH_WEST"</span>
 
 
     </div>
@@ -1137,6 +1138,14 @@ rpgcode.log(direction);
 
 
 
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>var direction = rpgcode.getSpriteDirection();
+rpgcode.log(direction);</code></pre>
+    
+
+
 </div>
             
                 <div class="member">
@@ -1148,7 +1157,7 @@ rpgcode.log(direction);
         
         <span class="code-name">
             
-                getSpriteLocation<span class="signature">(spriteId, inTiles, includeOffset)</span><span class="type-signature"> &rarr; {Object}</span>
+                getSpriteLocation<span class="signature">(spriteId, inTiles, includeOffset)</span><span class="type-signature"> &rarr; {<a href="Geometry.html#.Location">Geometry.Location</a>}</span>
             
         </span>
     </h4>
@@ -1202,7 +1211,7 @@ that happens when boards are smaller than the viewport dimensions.
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
@@ -1227,7 +1236,7 @@ that happens when boards are smaller than the viewport dimensions.
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
@@ -1252,7 +1261,7 @@ that happens when boards are smaller than the viewport dimensions.
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
@@ -1310,7 +1319,7 @@ that happens when boards are smaller than the viewport dimensions.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1528">line 1528</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1537">line 1537</a>
             </span>
         </p>
     
@@ -1341,13 +1350,13 @@ that happens when boards are smaller than the viewport dimensions.
 
 <div class="columns">
     
-    <div class='param-desc column is-7'>An object containing the characters location in the form {x, y, z}.</div>
+    <div class='param-desc column is-7'>An object containing the sprite's location.</div>
     
     
     <div class='column is-5 has-text-left'>
         <label>Type: </label>
         
-<span class="param-type">Object</span>
+<span class="param-type"><a href="Geometry.html#.Location">Geometry.Location</a></span>
 
 
     </div>
@@ -1433,7 +1442,7 @@ rpgcode.log(location);</code></pre>
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
@@ -1458,7 +1467,7 @@ rpgcode.log(location);</code></pre>
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
@@ -1483,7 +1492,7 @@ rpgcode.log(location);</code></pre>
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
@@ -1541,7 +1550,7 @@ rpgcode.log(location);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1996">line 1996</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2009">line 2009</a>
             </span>
         </p>
     
@@ -1645,7 +1654,7 @@ A short duration will result in the sprite arriving quicker and vice versa.
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
@@ -1670,7 +1679,7 @@ A short duration will result in the sprite arriving quicker and vice versa.
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
@@ -1695,7 +1704,7 @@ A short duration will result in the sprite arriving quicker and vice versa.
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
@@ -1720,7 +1729,7 @@ A short duration will result in the sprite arriving quicker and vice versa.
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
@@ -1803,7 +1812,7 @@ A short duration will result in the sprite arriving quicker and vice versa.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2118">line 2118</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2133">line 2133</a>
             </span>
         </p>
     
@@ -1905,7 +1914,7 @@ rpgcode.moveSpriteTo(spriteId, x, y, delay);</code></pre>
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
@@ -1930,7 +1939,7 @@ rpgcode.moveSpriteTo(spriteId, x, y, delay);</code></pre>
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
@@ -1955,7 +1964,7 @@ rpgcode.moveSpriteTo(spriteId, x, y, delay);</code></pre>
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
@@ -1980,7 +1989,7 @@ rpgcode.moveSpriteTo(spriteId, x, y, delay);</code></pre>
   <td class="type">
   
       
-<span class="param-type">Number</span>
+<span class="param-type">number</span>
 
 
   
@@ -2005,7 +2014,7 @@ rpgcode.moveSpriteTo(spriteId, x, y, delay);</code></pre>
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
@@ -2063,7 +2072,7 @@ rpgcode.moveSpriteTo(spriteId, x, y, delay);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2914">line 2914</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2931">line 2931</a>
             </span>
         </p>
     
@@ -2166,7 +2175,7 @@ rpgcode.setSpriteLocation(spriteId, x, y, layer, inTiles);</code></pre>
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
@@ -2191,7 +2200,7 @@ rpgcode.setSpriteLocation(spriteId, x, y, layer, inTiles);</code></pre>
   <td class="type">
   
       
-<span class="param-type">String</span>
+<span class="param-type">string</span>
 
 
   
@@ -2249,7 +2258,7 @@ rpgcode.setSpriteLocation(spriteId, x, y, layer, inTiles);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2944">line 2944</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2961">line 2961</a>
             </span>
         </p>
     
@@ -2320,6 +2329,8 @@ rpgcode.setSpriteStance(spriteId, stanceId);</code></pre>
 <script src="scripts/app.min.js"></script>
 <script>PR.prettyPrint();</script>
 <script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
 
 </body>
 </html>

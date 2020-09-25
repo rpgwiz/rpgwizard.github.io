@@ -40,6 +40,10 @@
         </a>
         <div class="logo">
             
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">RPGWizard Documentation</h1>
+                </a>
             
         </div>
         <div class="menu">
@@ -96,9 +100,13 @@
             id="sidebarNav"
         >
             
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
             <nav>
                 
-                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Namespaces</h3><ul><li><a href="Asset.html">Asset</a></li><li><a href="Board.html">Board</a></li><li><a href="Canvas.html">Canvas</a></li><li><a href="Character.html">Character</a></li><li><a href="Draw2D.html">Draw2D</a></li><li><a href="File.html">File</a></li><li><a href="Geometry.html">Geometry</a></li><li><a href="Global_.html">Global</a></li><li><a href="Image.html">Image</a></li><li><a href="Item.html">Item</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="Program.html">Program</a></li><li><a href="Sound.html">Sound</a></li><li><a href="Sprite.html">Sprite</a></li><li><a href="Text.html">Text</a></li><li><a href="Util.html">Util</a></li></ul><h3>Classes</h3><ul><li><a href="RPGcode.html">RPGcode</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Namespaces</h3><ul><li><a href="Asset.html">Asset</a></li><li><a href="Board.html">Board</a></li><li><a href="Canvas.html">Canvas</a></li><li><a href="Character.html">Character</a></li><li><a href="Draw2D.html">Draw2D</a></li><li><a href="File.html">File</a></li><li><a href="Geometry.html">Geometry</a></li><li><a href="Global_.html">Global</a></li><li><a href="Image.html">Image</a></li><li><a href="Item.html">Item</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="Program.html">Program</a></li><li><a href="Sound.html">Sound</a></li><li><a href="Sprite.html">Sprite</a></li><li><a href="Text.html">Text</a></li><li><a href="Util.html">Util</a></li></ul><h3>Classes</h3><ul><li><a href="Battle.html">Battle</a></li><li><a href="Dialog.html">Dialog</a></li><li><a href="HUD.html">HUD</a></li><li><a href="Inventory.html">Inventory</a></li><li><a href="RPGcode.html">RPGcode</a></li><li><a href="TitleScreen.html">TitleScreen</a></li><li><a href="Weather.html">Weather</a></li></ul></div>
                 
             </nav>
         </div>
@@ -165,7 +173,7 @@
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line25">line 25</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line28">line 28</a>
             </span>
         </p>
     
@@ -204,7 +212,7 @@
         
         <span class="code-name">
             
-                registerMouseClick<span class="signature">(callback, globalScope)</span><span class="type-signature"> &rarr; {undefined}</span>
+                registerMouseClick<span class="signature">(callback, globalScope<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -242,7 +250,11 @@ until it is unregistered.
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -268,7 +280,19 @@ until it is unregistered.
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The callback function to invoke when the event fires.</td>
@@ -286,14 +310,30 @@ until it is unregistered.
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
   
 
   <td class="description last">Is this for use outside of the program itself?</td>
@@ -344,7 +384,7 @@ until it is unregistered.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2305">line 2305</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2316">line 2316</a>
             </span>
         </p>
     
@@ -366,29 +406,6 @@ until it is unregistered.
 
 
 
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">undefined</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
 
 
 
@@ -418,7 +435,7 @@ until it is unregistered.
         
         <span class="code-name">
             
-                registerMouseDoubleClick<span class="signature">(callback, globalScope)</span><span class="type-signature"> &rarr; {undefined}</span>
+                registerMouseDoubleClick<span class="signature">(callback, globalScope<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -456,7 +473,11 @@ until it is unregistered.
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -482,7 +503,19 @@ until it is unregistered.
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The callback function to invoke when the event fires.</td>
@@ -500,14 +533,30 @@ until it is unregistered.
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
   
 
   <td class="description last">Is this for use outside of the program itself?</td>
@@ -558,7 +607,7 @@ until it is unregistered.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2336">line 2336</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2346">line 2346</a>
             </span>
         </p>
     
@@ -580,29 +629,6 @@ until it is unregistered.
 
 
 
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">undefined</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
 
 
 
@@ -632,7 +658,7 @@ until it is unregistered.
         
         <span class="code-name">
             
-                registerMouseDown<span class="signature">(callback, globalScope)</span><span class="type-signature"> &rarr; {undefined}</span>
+                registerMouseDown<span class="signature">(callback, globalScope<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -670,7 +696,11 @@ until it is unregistered.
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -696,7 +726,19 @@ until it is unregistered.
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The callback function to invoke when the event fires.</td>
@@ -714,14 +756,30 @@ until it is unregistered.
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
   
 
   <td class="description last">Is this for use outside of the program itself?</td>
@@ -772,7 +830,7 @@ until it is unregistered.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2243">line 2243</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2256">line 2256</a>
             </span>
         </p>
     
@@ -794,29 +852,6 @@ until it is unregistered.
 
 
 
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">undefined</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
 
 
 
@@ -846,7 +881,7 @@ until it is unregistered.
         
         <span class="code-name">
             
-                registerMouseMove<span class="signature">(callback, globalScope)</span><span class="type-signature"> &rarr; {undefined}</span>
+                registerMouseMove<span class="signature">(callback, globalScope<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -884,7 +919,11 @@ until it is unregistered.
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -910,7 +949,19 @@ until it is unregistered.
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The callback function to invoke when the event fires.</td>
@@ -928,14 +979,30 @@ until it is unregistered.
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
   
 
   <td class="description last">Is this for use outside of the program itself?</td>
@@ -986,7 +1053,7 @@ until it is unregistered.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2364">line 2364</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2373">line 2373</a>
             </span>
         </p>
     
@@ -1008,29 +1075,6 @@ until it is unregistered.
 
 
 
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">undefined</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
 
 
 
@@ -1057,7 +1101,7 @@ until it is unregistered.
         
         <span class="code-name">
             
-                registerMouseUp<span class="signature">(callback, globalScope)</span><span class="type-signature"> &rarr; {undefined}</span>
+                registerMouseUp<span class="signature">(callback, globalScope<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -1095,7 +1139,11 @@ until it is unregistered.
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -1121,7 +1169,19 @@ until it is unregistered.
   </td>
 
   
+      <td class="attributes">
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+      </td>
   
 
   <td class="description last">The callback function to invoke when the event fires.</td>
@@ -1139,14 +1199,30 @@ until it is unregistered.
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
   
 
   <td class="description last">Is this for use outside of the program itself?</td>
@@ -1197,7 +1273,7 @@ until it is unregistered.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2274">line 2274</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2286">line 2286</a>
             </span>
         </p>
     
@@ -1219,29 +1295,6 @@ until it is unregistered.
 
 
 
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">undefined</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
 
 
 
@@ -1271,7 +1324,7 @@ until it is unregistered.
         
         <span class="code-name">
             
-                unregisterMouseClick<span class="signature">(globalScope)</span><span class="type-signature"> &rarr; {undefined}</span>
+                unregisterMouseClick<span class="signature">(globalScope<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -1305,7 +1358,11 @@ until it is unregistered.
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -1324,14 +1381,30 @@ until it is unregistered.
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
   
 
   <td class="description last">Is this a global scope mouse handler.</td>
@@ -1382,7 +1455,7 @@ until it is unregistered.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3224">line 3224</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3237">line 3237</a>
             </span>
         </p>
     
@@ -1404,29 +1477,6 @@ until it is unregistered.
 
 
 
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">undefined</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
 
 
 
@@ -1453,7 +1503,7 @@ rpgcode.unregisterMouseClick(true);</code></pre>
         
         <span class="code-name">
             
-                unregisterMouseDoubleClick<span class="signature">(globalScope)</span><span class="type-signature"> &rarr; {undefined}</span>
+                unregisterMouseDoubleClick<span class="signature">(globalScope<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -1487,7 +1537,11 @@ rpgcode.unregisterMouseClick(true);</code></pre>
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -1506,14 +1560,30 @@ rpgcode.unregisterMouseClick(true);</code></pre>
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
   
 
   <td class="description last">Is this a global scope mouse handler.</td>
@@ -1564,7 +1634,7 @@ rpgcode.unregisterMouseClick(true);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3247">line 3247</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3259">line 3259</a>
             </span>
         </p>
     
@@ -1586,29 +1656,6 @@ rpgcode.unregisterMouseClick(true);</code></pre>
 
 
 
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">undefined</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
 
 
 
@@ -1635,7 +1682,7 @@ rpgcode.unregisterMouseDoubleClick(true);</code></pre>
         
         <span class="code-name">
             
-                unregisterMouseDown<span class="signature">(globalScope)</span><span class="type-signature"> &rarr; {undefined}</span>
+                unregisterMouseDown<span class="signature">(globalScope<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -1669,7 +1716,11 @@ rpgcode.unregisterMouseDoubleClick(true);</code></pre>
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -1688,14 +1739,30 @@ rpgcode.unregisterMouseDoubleClick(true);</code></pre>
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
   
 
   <td class="description last">Is this a global scope mouse handler.</td>
@@ -1746,7 +1813,7 @@ rpgcode.unregisterMouseDoubleClick(true);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3178">line 3178</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3193">line 3193</a>
             </span>
         </p>
     
@@ -1768,29 +1835,6 @@ rpgcode.unregisterMouseDoubleClick(true);</code></pre>
 
 
 
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">undefined</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
 
 
 
@@ -1817,7 +1861,7 @@ rpgcode.unregisterMouseDown(true);</code></pre>
         
         <span class="code-name">
             
-                unregisterMouseMove<span class="signature">(globalScope)</span><span class="type-signature"> &rarr; {undefined}</span>
+                unregisterMouseMove<span class="signature">(globalScope<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -1851,7 +1895,11 @@ rpgcode.unregisterMouseDown(true);</code></pre>
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -1870,14 +1918,30 @@ rpgcode.unregisterMouseDown(true);</code></pre>
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
   
 
   <td class="description last">Is this a global scope mouse handler.</td>
@@ -1928,7 +1992,7 @@ rpgcode.unregisterMouseDown(true);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3270">line 3270</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3281">line 3281</a>
             </span>
         </p>
     
@@ -1950,29 +2014,6 @@ rpgcode.unregisterMouseDown(true);</code></pre>
 
 
 
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">undefined</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
 
 
 
@@ -1999,7 +2040,7 @@ rpgcode.unregisterMouseMove(true);</code></pre>
         
         <span class="code-name">
             
-                unregisterMouseUp<span class="signature">(globalScope)</span><span class="type-signature"> &rarr; {undefined}</span>
+                unregisterMouseUp<span class="signature">(globalScope<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span>
             
         </span>
     </h4>
@@ -2033,7 +2074,11 @@ rpgcode.unregisterMouseMove(true);</code></pre>
             <th>Type</th>
 
             
+            <th>Attributes</th>
+            
 
+            
+            <th>Default</th>
             
 
             <th class="last">Description</th>
@@ -2052,14 +2097,30 @@ rpgcode.unregisterMouseMove(true);</code></pre>
   <td class="type">
   
       
-<span class="param-type">Boolean</span>
+<span class="param-type">boolean</span>
 
 
   
   </td>
 
   
+      <td class="attributes">
+      
+          &lt;optional><br>
+      
 
+      
+
+      
+      </td>
+  
+
+  
+      <td class="default">
+      
+          false
+      
+      </td>
   
 
   <td class="description last">Is this a global scope mouse handler.</td>
@@ -2110,7 +2171,7 @@ rpgcode.unregisterMouseMove(true);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3201">line 3201</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3215">line 3215</a>
             </span>
         </p>
     
@@ -2132,29 +2193,6 @@ rpgcode.unregisterMouseMove(true);</code></pre>
 
 
 
-
-    <div class='columns method-parameter'>
-        <div class="column is-2"><label>Returns:</label></div>
-        <div class="column is-10">
-            
-                    
-
-<div class="columns">
-    
-    
-    <div class='column is-5 has-text-left'>
-        <label>Type: </label>
-        
-<span class="param-type">undefined</span>
-
-
-    </div>
-    
-</div>
-
-                
-        </div>
-    </div>
 
 
 
@@ -2205,6 +2243,8 @@ rpgcode.unregisterMouseUp(true);</code></pre>
 <script src="scripts/app.min.js"></script>
 <script>PR.prettyPrint();</script>
 <script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
 
 </body>
 </html>

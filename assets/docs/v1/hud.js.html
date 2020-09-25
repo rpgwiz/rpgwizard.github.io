@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Tutorials</title>
+  <title> hud.js</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -40,6 +42,10 @@
         </a>
         <div class="logo">
             
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">RPGWizard Documentation</h1>
+                </a>
             
         </div>
         <div class="menu">
@@ -80,14 +86,6 @@
                                 Example Games
                             </a>
                         
-                            <a class="dropdown-item" href="tutorial-Home.html">
-                                Home
-                            </a>
-                        
-                            <a class="dropdown-item" href="tutorial-Tutorials.html">
-                                Tutorials
-                            </a>
-                        
                         </div>
                     </div>
                 </div>
@@ -100,41 +98,123 @@
 </div>
     <div id="main">
         <div
-            class="sidebar tutorials"
+            class="sidebar "
             id="sidebarNav"
         >
             
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
             <nav>
                 
-                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-01-Getting-Started.html">Getting Started</a><ul><li><a href="tutorial-01-What-is-RPGWizard.html">What is RPGWizard</a></li><li><a href="tutorial-01-Trying-Out-the-Demo.html">Trying Out the Demo</a></li><li><a href="tutorial-01-FAQ.html">FAQ</a></li></ul></li><li><a href="tutorial-02-Your-First-Game.html">Your First Game</a><ul><li><a href="tutorial-02-Starting-a-New-Project.html">Starting a New Project</a></li><li><a href="tutorial-02-Creating-an-Animation.html">Creating an Animation</a></li><li><a href="tutorial-02-Creating-a-Character.html">Creating a Character</a></li><li><a href="tutorial-02-Creating-a-Tileset.html">Creating a Tileset</a></li><li><a href="tutorial-02-Creating-a-Board.html">Creating a Board</a></li><li><a href="tutorial-02-Creating-a-Board-Layer.html">Creating a Board Layer</a></li><li><a href="tutorial-02-Adding-a-Solid-Board-Vector.html">Adding a Solid Board Vector</a></li><li><a href="tutorial-02-Moving-between-Boards.html">Moving between Boards</a></li><li><a href="tutorial-02-Creating-an-NPC.html">Creating an NPC</a></li><li><a href="tutorial-02-Creating-a-Board-Sprite.html">Creating a Board Sprite</a></li><li><a href="tutorial-02-Creating-an-Inventory-Item.html">Creating an Inventory Item</a></li></ul></li><li><a href="tutorial-03-Programming-Guide.html">Programming Guide</a><ul><li><a href="tutorial-03-Introduction-to-JavaScript.html">Introduction to JavaScript</a></li><li><a href="tutorial-03-Asset-Management.html">Asset Management</a></li><li><a href="tutorial-03-Global-Variables.html">Global Variables</a></li><li><a href="tutorial-03-Working-with-Graphics.html">Working with Graphics</a></li><li><a href="tutorial-03-Working-with-Canvases.html">Working with Canvases</a></li><li><a href="tutorial-03-User-Input.html">User Input</a></li><li><a href="tutorial-03-File-Handling.html">File Handling</a></li></ul></li><li><a href="tutorial-04-Default-Systems.html">Default Systems</a><ul><li><a href="tutorial-04-Setting-up-the-Default-Systems.html">Setup Process</a></li><li><a href="tutorial-04-Title-Screen.html">Title Screen</a></li><li><a href="tutorial-04-Dialog-Window.html">Dialog Window</a></li><li><a href="tutorial-04-Battle-System.html">Battle System</a></li></ul></li><li><a href="tutorial-05-Example-Games.html">Example Games</a><ul><li><a href="tutorial-05-The-Vent.html">The Vent</a></li></ul></li><li><a href="tutorial-Home.html">Home</a></li><li><a href="tutorial-Tutorials.html">Tutorials</a></li></ul></div>
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Namespaces</h3><ul><li><a href="Asset.html">Asset</a></li><li><a href="Board.html">Board</a></li><li><a href="Canvas.html">Canvas</a></li><li><a href="Character.html">Character</a></li><li><a href="Draw2D.html">Draw2D</a></li><li><a href="File.html">File</a></li><li><a href="Geometry.html">Geometry</a></li><li><a href="Global_.html">Global</a></li><li><a href="Image.html">Image</a></li><li><a href="Item.html">Item</a></li><li><a href="Keyboard.html">Keyboard</a></li><li><a href="Mouse.html">Mouse</a></li><li><a href="Program.html">Program</a></li><li><a href="Sound.html">Sound</a></li><li><a href="Sprite.html">Sprite</a></li><li><a href="Text.html">Text</a></li><li><a href="Util.html">Util</a></li></ul><h3>Classes</h3><ul><li><a href="Battle.html">Battle</a></li><li><a href="Dialog.html">Dialog</a></li><li><a href="HUD.html">HUD</a></li><li><a href="Inventory.html">Inventory</a></li><li><a href="RPGcode.html">RPGcode</a></li><li><a href="TitleScreen.html">TitleScreen</a></li><li><a href="Weather.html">Weather</a></li></ul></div>
                 
             </nav>
         </div>
         <div class="core" id="main-content-wrapper">
             <div class="content">
                 <header class="page-title">
-                    <p>Tutorial</p>
-                    <h1>Tutorials</h1>
+                    <p>Source</p>
+                    <h1>hud.js</h1>
                 </header>
-                <section>
+                
 
-<article>
-    <blockquote>
-<p>These tutorials are a work in progress, it is recommended you look at the Getting Started at a minimum!</p>
-</blockquote>
-<h2>Community</h2>
-<h3>Discord</h3>
-<p>Feel free to join our discord server where you can chat with other users, and
-get direct help from the RPGWizard's dev <strong>swordmaster</strong>.</p>
-<p>Join the discussion over on Discord: <a href="https://discord.gg/tFfngEv">RPGWizard Discord</a></p>
-<h2>YouTube</h2>
-<h3>Getting Started</h3>
-<p>Check out our YouTube channel where we are building up a <strong>Getting Started Playlist</strong>.</p>
-<p>YouTube: <a href="https://www.youtube.com/channel/UCmu0wCrVtiN6A6-Z_AL5JMA/playlists">RPGWizard YouTube</a></p>
-<p><a href="https://www.youtube.com/watch?v=KZra59BGpMs"><img src="https://img.youtube.com/vi/KZra59BGpMs/0.jpg" alt="Getting started"></a></p>
-</article>
 
-</section>
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/* global rpgcode, gui */
+let hud = new HUD();
+
+/**
+ * The builtin HUD system.
+ * 
+ * @class
+ * @constructor
+ * 
+ * @returns {HUD}
+ */
+function HUD() {
+   
+}
+
+/**
+ *  Shows the default title screen system based the supplied config.
+ * 
+ * @example
+ * let config = {
+ *    life: {
+ *       image: "life.png",
+ *       width: 32,
+ *       height: 32
+ *    }
+ * };
+ * hud.show(config, function() {rpgcode.log("hud closed";});
+ * 
+ * @param {Object} config
+ * @param {Callback} callback
+ * @returns {undefined}
+ */
+HUD.prototype.show = function(config, callback) {
+   this._loadAssets(config, function() {
+      this._callback = callback;
+      this._setup(config);
+   }.bind(this));
+};
+
+HUD.prototype.close = function() {
+   this._end();
+};
+
+HUD.prototype._end = function() {
+   clearInterval(this._updateInterval);
+   rpgcode.clearCanvas(this.background.canvasId);
+   rpgcode.destroyCanvas(this.background.canvasId);
+};
+
+HUD.prototype._setup = function(config) {
+   this._config = config;
+   this._state = {};
+   this.background = {
+      canvasId: "HUD.backgroundCanvas",
+      width: rpgcode.getViewport().width,
+      height: rpgcode.getViewport().height,
+      x: 0,
+      y: 0
+   };
+   rpgcode.createCanvas(this.background.width, this.background.height, this.background.canvasId);
+   rpgcode.setCanvasPosition(this.background.x, this.background.y, this.background.canvasId);
+   this._updateInterval = setInterval(this._update.bind(this), 50); // Update the HUD every 50ms
+};
+
+HUD.prototype._loadAssets = function(config, callback) {
+   let assets = {
+      "images": [config.life.image]
+   };
+   rpgcode.loadAssets(assets, callback.bind(this));
+};
+
+HUD.prototype._update = function() {
+   let hearts = rpgcode.getCharacter().health;
+   if (hearts &lt; 1) {
+      rpgcode.restart();
+   }
+
+   let width = this._config.life.width;
+   let height = this._config.life.height;
+   rpgcode.clearCanvas(this.background.canvasId);
+   for (let i = 0; i &lt; hearts; i++) {
+      rpgcode.setImage(this._config.life.image, (width / 2) + (width * i), 0, width, height, this.background.canvasId);
+   }
+   rpgcode.renderNow(this.background.canvasId);
+};</code></pre>
+        </article>
+    </section>
+
+
+
 
             </div>
             
@@ -155,6 +235,8 @@ get direct help from the RPGWizard's dev <strong>swordmaster</strong>.</p>
 <script src="scripts/app.min.js"></script>
 <script>PR.prettyPrint();</script>
 <script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
 
 </body>
 </html>
