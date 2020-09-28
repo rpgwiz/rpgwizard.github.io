@@ -106,7 +106,7 @@
             
             <nav>
                 
-                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-01-Getting-Started.html">Getting Started</a><ul><li><a href="tutorial-01-What-is-RPGWizard.html">What is RPGWizard</a></li><li><a href="tutorial-01-Trying-Out-the-Demo.html">Trying Out the Demo</a></li><li><a href="tutorial-01-FAQ.html">FAQ</a></li></ul></li><li><a href="tutorial-02-Your-First-Game.html">Your First Game</a><ul><li><a href="tutorial-02-Starting-a-New-Project.html">Starting a New Project</a></li><li><a href="tutorial-02-Creating-an-Animation.html">Creating an Animation</a></li><li><a href="tutorial-02-Creating-a-Character.html">Creating a Character</a></li><li><a href="tutorial-02-Creating-a-Tileset.html">Creating a Tileset</a></li><li><a href="tutorial-02-Creating-a-Board.html">Creating a Board</a></li><li><a href="tutorial-02-Creating-a-Board-Layer.html">Creating a Board Layer</a></li><li><a href="tutorial-02-Adding-a-Solid-Board-Vector.html">Adding a Solid Board Vector</a></li><li><a href="tutorial-02-Moving-between-Boards.html">Moving between Boards</a></li><li><a href="tutorial-02-Creating-an-NPC.html">Creating an NPC</a></li><li><a href="tutorial-02-Creating-a-Board-Sprite.html">Creating a Board Sprite</a></li><li><a href="tutorial-02-Creating-an-Inventory-Item.html">Creating an Inventory Item</a></li></ul></li><li><a href="tutorial-03-Programming-Guide.html">Programming Guide</a><ul><li><a href="tutorial-03-Introduction-to-JavaScript.html">Introduction to JavaScript</a></li><li><a href="tutorial-03-Asset-Management.html">Asset Management</a></li><li><a href="tutorial-03-Global-Variables.html">Global Variables</a></li><li><a href="tutorial-03-Working-with-Graphics.html">Working with Graphics</a></li><li><a href="tutorial-03-Working-with-Canvases.html">Working with Canvases</a></li><li><a href="tutorial-03-User-Input.html">User Input</a></li><li><a href="tutorial-03-File-Handling.html">File Handling</a></li></ul></li><li><a href="tutorial-04-Default-Systems.html">Default Systems</a><ul><li><a href="tutorial-04-Setting-up-the-Default-Systems.html">Setup Process</a></li><li><a href="tutorial-04-Title-Screen.html">Title Screen</a></li><li><a href="tutorial-04-Dialog-Window.html">Dialog Window</a></li><li><a href="tutorial-04-Battle-System.html">Battle System</a></li></ul></li><li><a href="tutorial-05-Example-Games.html">Example Games</a><ul><li><a href="tutorial-05-The-Vent.html">The Vent</a></li></ul></li></ul></div>
+                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-01-Getting-Started.html">Getting Started</a><ul><li><a href="tutorial-01-Trying-Out-the-Demo.html">Trying Out the Demo</a></li></ul></li><li><a href="tutorial-02-Your-First-Game.html">Your First Game</a><ul><li><a href="tutorial-02-Starting-a-New-Project.html">Starting a New Project</a></li><li><a href="tutorial-02-Creating-an-Animation.html">Creating an Animation</a></li><li><a href="tutorial-02-Creating-a-Character.html">Creating a Character</a></li><li><a href="tutorial-02-Creating-a-Tileset.html">Creating a Tileset</a></li><li><a href="tutorial-02-Creating-a-Board.html">Creating a Board</a></li><li><a href="tutorial-02-Creating-a-Board-Layer.html">Creating a Board Layer</a></li><li><a href="tutorial-02-Adding-a-Solid-Board-Vector.html">Adding a Solid Board Vector</a></li><li><a href="tutorial-02-Moving-between-Boards.html">Moving between Boards</a></li><li><a href="tutorial-02-Creating-an-NPC.html">Creating an NPC</a></li><li><a href="tutorial-02-Creating-a-Board-Sprite.html">Creating a Board Sprite</a></li><li><a href="tutorial-02-Creating-an-Inventory-Item.html">Creating an Inventory Item</a></li></ul></li><li><a href="tutorial-03-Programming-Guide.html">Programming Guide</a><ul><li><a href="tutorial-03-Introduction-to-JavaScript.html">Introduction to JavaScript</a></li><li><a href="tutorial-03-Asset-Management.html">Asset Management</a></li><li><a href="tutorial-03-Global-Variables.html">Global Variables</a></li><li><a href="tutorial-03-Working-with-Graphics.html">Working with Graphics</a></li><li><a href="tutorial-03-Working-with-Canvases.html">Working with Canvases</a></li><li><a href="tutorial-03-User-Input.html">User Input</a></li><li><a href="tutorial-03-File-Handling.html">File Handling</a></li></ul></li><li><a href="tutorial-04-Default-Systems.html">Default Systems</a><ul><li><a href="tutorial-04-Setting-up-the-Default-Systems.html">Setup Process</a></li><li><a href="tutorial-04-Title-Screen.html">Title Screen</a></li><li><a href="tutorial-04-Dialog-Window.html">Dialog Window</a></li><li><a href="tutorial-04-Battle-System.html">Battle System</a></li></ul></li><li><a href="tutorial-05-Example-Games.html">Example Games</a><ul><li><a href="tutorial-05-The-Vent.html">The Vent</a></li></ul></li></ul></div>
                 
             </nav>
         </div>
@@ -119,19 +119,19 @@
                 <section>
 
 <article>
-    <h1>Summary</h1>
+    <h2>Summary</h2>
 <p>In this part of the tutorial we will create our first board. A board is an area in which the player can walk around and explore during the game. They are made up of a grid of tiles, activation vectors, collision vectors, and board sprites.</p>
 <blockquote>
 <p>NOTE: The <strong>maximum size of a Board is 50 x 50 tiles</strong> for performance reasons, bigger sizes have been tried but at this time they are too slow to edit and explore.</p>
 </blockquote>
-<h1>Steps</h1>
+<h2>Steps</h2>
 <p>To create a board go to <strong>File &gt; New &gt; New Board</strong>.</p>
 <p><img src="images/my_first_game/05_new_board/images/1.png" alt=""></p>
 <p>By default it is configured for grid made up of 10 x 10 tiles that are 32 x 32 in dimension. For this tutorial we shall leave it at the default so simply click &quot;OK&quot;.</p>
 <p><img src="images/my_first_game/05_new_board/images/2.png" alt=""></p>
 <p>At this point you will have a blank board with a single layer which isn't interesting on its own. So make sure you have the tileset from the last tutorial open so we can start adding some tiles to it.</p>
 <p><img src="images/my_first_game/05_new_board/images/3.png" alt=""></p>
-<h2>Board Tools</h2>
+<h3>Board Tools</h3>
 <p>Along the main window's toolbar you'll notice a set of image editor like controls a pencil, selection, bucket, eraser, vector, sprite, and a flag. All of these can used to manipulate boards in one way or another, some of them can even be combined like the selection tool and the bucket brush. By the end of this tutorial series you will have used each of these tools:</p>
 <ul>
 <li><strong>Pencil Tool:</strong> Used to draw a single tile on the board, can be dragged.</li>
@@ -146,19 +146,19 @@
 <p><img src="images/my_first_game/05_new_board/images/4.png" alt=""></p>
 <p>For this next part simply select a tile from the tileset then switch to the bucket tool and fill the board so it looks something like this:</p>
 <p><img src="images/my_first_game/05_new_board/images/5.png" alt=""></p>
-<h2>Player Start Position</h2>
+<h3>Player Start Position</h3>
 <p>Now switch to the start tool and place it on the board. This is where the player will start, it records the (x, y) position and the layer you placed it on. So if you see your character walking above things make sure you have them on the correct layer!</p>
 <p><img src="images/my_first_game/05_new_board/images/6.png" alt=""></p>
-<h2>Saving the Board</h2>
+<h3>Saving the Board</h3>
 <p>We are nearly ready to try out our game but first we need to set the starting character and board. Go to open a file and find your projects &quot;.game&quot; file. This will open the project editor if it is not already open.</p>
 <p><img src="images/my_first_game/05_new_board/images/7.png" alt=""></p>
 <p><img src="images/my_first_game/05_new_board/images/8.png" alt=""></p>
-<h2>Setting an Initial Board</h2>
+<h3>Setting an Initial Board</h3>
 <p>Now using the available drop downs set the starting character and starting board then save.</p>
 <p><img src="images/my_first_game/05_new_board/images/9.png" alt=""></p>
 <p>Click the play button in the toolbar at the top and you should find yourself on the board playing as the character we created early. Hooray you've just taken your first big step in game development with the RPGWizard!</p>
 <p><img src="images/my_first_game/05_new_board/images/10.png" alt=""></p>
-<h1>Challenge</h1>
+<h2>Challenge</h2>
 <blockquote>
 <p>Using the Tileset you found on Google in the previous tutorial create another board with the same dimensions. Note you cannot mix Tilesets and boards with different tile dimensions so make sure they match up!</p>
 </blockquote>

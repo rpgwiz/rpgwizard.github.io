@@ -12,7 +12,7 @@ free to join us.
 
 <br>
 
-![/rpgwizard/assets/img/community/discord.png](/rpgwizard/assets/img/community/discord.png){: height="256px" width="256px" style="float: left"}
+![/site/assets/img/community/discord.png](/site/assets/img/community/discord.png){: height="256px" width="256px" style="float: left"}
 Join the Official RPGWizard Discord Server, be part of a growing community of users, share your games, ideas, and get answers to your questions.
 
 [Join Us](https://discord.gg/tFfngEv){: .btn .btn-danger target="_blank"}

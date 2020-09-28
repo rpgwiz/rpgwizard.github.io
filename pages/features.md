@@ -9,7 +9,7 @@ permalink: /features/
 
 <br>
 
-![/rpgwizard/assets/img/features/editor.jpg](/rpgwizard/assets/img/features/editor.jpg)
+![/site/assets/img/features/editor.jpg](/site/assets/img/features/editor.jpg)
 
 {::options auto_ids="true" /}
 

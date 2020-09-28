@@ -106,7 +106,7 @@
             
             <nav>
                 
-                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-01-Getting-Started.html">Getting Started</a><ul><li><a href="tutorial-01-What-is-RPGWizard.html">What is RPGWizard</a></li><li><a href="tutorial-01-Trying-Out-the-Demo.html">Trying Out the Demo</a></li><li><a href="tutorial-01-FAQ.html">FAQ</a></li></ul></li><li><a href="tutorial-02-Your-First-Game.html">Your First Game</a><ul><li><a href="tutorial-02-Starting-a-New-Project.html">Starting a New Project</a></li><li><a href="tutorial-02-Creating-an-Animation.html">Creating an Animation</a></li><li><a href="tutorial-02-Creating-a-Character.html">Creating a Character</a></li><li><a href="tutorial-02-Creating-a-Tileset.html">Creating a Tileset</a></li><li><a href="tutorial-02-Creating-a-Board.html">Creating a Board</a></li><li><a href="tutorial-02-Creating-a-Board-Layer.html">Creating a Board Layer</a></li><li><a href="tutorial-02-Adding-a-Solid-Board-Vector.html">Adding a Solid Board Vector</a></li><li><a href="tutorial-02-Moving-between-Boards.html">Moving between Boards</a></li><li><a href="tutorial-02-Creating-an-NPC.html">Creating an NPC</a></li><li><a href="tutorial-02-Creating-a-Board-Sprite.html">Creating a Board Sprite</a></li><li><a href="tutorial-02-Creating-an-Inventory-Item.html">Creating an Inventory Item</a></li></ul></li><li><a href="tutorial-03-Programming-Guide.html">Programming Guide</a><ul><li><a href="tutorial-03-Introduction-to-JavaScript.html">Introduction to JavaScript</a></li><li><a href="tutorial-03-Asset-Management.html">Asset Management</a></li><li><a href="tutorial-03-Global-Variables.html">Global Variables</a></li><li><a href="tutorial-03-Working-with-Graphics.html">Working with Graphics</a></li><li><a href="tutorial-03-Working-with-Canvases.html">Working with Canvases</a></li><li><a href="tutorial-03-User-Input.html">User Input</a></li><li><a href="tutorial-03-File-Handling.html">File Handling</a></li></ul></li><li><a href="tutorial-04-Default-Systems.html">Default Systems</a><ul><li><a href="tutorial-04-Setting-up-the-Default-Systems.html">Setup Process</a></li><li><a href="tutorial-04-Title-Screen.html">Title Screen</a></li><li><a href="tutorial-04-Dialog-Window.html">Dialog Window</a></li><li><a href="tutorial-04-Battle-System.html">Battle System</a></li></ul></li><li><a href="tutorial-05-Example-Games.html">Example Games</a><ul><li><a href="tutorial-05-The-Vent.html">The Vent</a></li></ul></li></ul></div>
+                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-01-Getting-Started.html">Getting Started</a><ul><li><a href="tutorial-01-Trying-Out-the-Demo.html">Trying Out the Demo</a></li></ul></li><li><a href="tutorial-02-Your-First-Game.html">Your First Game</a><ul><li><a href="tutorial-02-Starting-a-New-Project.html">Starting a New Project</a></li><li><a href="tutorial-02-Creating-an-Animation.html">Creating an Animation</a></li><li><a href="tutorial-02-Creating-a-Character.html">Creating a Character</a></li><li><a href="tutorial-02-Creating-a-Tileset.html">Creating a Tileset</a></li><li><a href="tutorial-02-Creating-a-Board.html">Creating a Board</a></li><li><a href="tutorial-02-Creating-a-Board-Layer.html">Creating a Board Layer</a></li><li><a href="tutorial-02-Adding-a-Solid-Board-Vector.html">Adding a Solid Board Vector</a></li><li><a href="tutorial-02-Moving-between-Boards.html">Moving between Boards</a></li><li><a href="tutorial-02-Creating-an-NPC.html">Creating an NPC</a></li><li><a href="tutorial-02-Creating-a-Board-Sprite.html">Creating a Board Sprite</a></li><li><a href="tutorial-02-Creating-an-Inventory-Item.html">Creating an Inventory Item</a></li></ul></li><li><a href="tutorial-03-Programming-Guide.html">Programming Guide</a><ul><li><a href="tutorial-03-Introduction-to-JavaScript.html">Introduction to JavaScript</a></li><li><a href="tutorial-03-Asset-Management.html">Asset Management</a></li><li><a href="tutorial-03-Global-Variables.html">Global Variables</a></li><li><a href="tutorial-03-Working-with-Graphics.html">Working with Graphics</a></li><li><a href="tutorial-03-Working-with-Canvases.html">Working with Canvases</a></li><li><a href="tutorial-03-User-Input.html">User Input</a></li><li><a href="tutorial-03-File-Handling.html">File Handling</a></li></ul></li><li><a href="tutorial-04-Default-Systems.html">Default Systems</a><ul><li><a href="tutorial-04-Setting-up-the-Default-Systems.html">Setup Process</a></li><li><a href="tutorial-04-Title-Screen.html">Title Screen</a></li><li><a href="tutorial-04-Dialog-Window.html">Dialog Window</a></li><li><a href="tutorial-04-Battle-System.html">Battle System</a></li></ul></li><li><a href="tutorial-05-Example-Games.html">Example Games</a><ul><li><a href="tutorial-05-The-Vent.html">The Vent</a></li></ul></li></ul></div>
                 
             </nav>
         </div>
@@ -119,16 +119,16 @@
                 <section>
 
 <article>
-    <h1>Summary</h1>
+    <h2>Summary</h2>
 <p>In the last part of this tutorial series we will look at creating inventory items. An item can be placed in or removed from a character's inventory while the game is running. Certain item types can even be equipped to a character such as a sword, shield, and so on.</p>
-<h1>Steps</h1>
+<h2>Steps</h2>
 <p>To create an item go to <strong>File &gt; New &gt; New Item</strong>.</p>
 <p><img src="images/my_first_game/11_new_item/images/1.png" alt=""></p>
 <p>The item editor is very simple and relatively straight forward to use. You can set a name, an image (which can be set using a double-click), slot type, sellable price, and a few default effects to apply when equipped. When an item is equipped you can update the character stance to reflect this if you wish. There are a few basic slots that the item type can be set to:</p>
 <ul>
 <li><strong>Default Slots:</strong> chest, boots, gloves, head, right-hand, left-hand</li>
 </ul>
-<h2>Equipping an Item</h2>
+<h3>Equipping an Item</h3>
 <p>To use an item in the engine you need to give it to a character, which involves loading it into the engine like any other asset. In the below code example we load up an item file and equip it to the character's right-hand slot. When we equip the item we remove it from the character's inventory, likewise when place it back into the inventory when removing it from the right-hand slot:</p>
 <pre class="prettyprint source lang-javascript"><code>// Part 1: Load the item.
 var itemFile = &quot;dragon_sword.item&quot;;
@@ -153,7 +153,7 @@ rpgcode.giveItem(itemFile, &quot;Hero&quot;, function() {
 
 });
 </code></pre>
-<h1>Challenge</h1>
+<h2>Challenge</h2>
 <blockquote>
 <p>You have completed the basic tutorial on how to make a game with the RPGWizard. The next set of tutorials will build upon what you've learned here and teach you how to bring your game to life with code.</p>
 </blockquote>

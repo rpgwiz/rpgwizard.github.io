@@ -3,6 +3,8 @@
       url: "news"
     - title: "Features"
       url: "features"
+    - title: "FAQ"
+      url: "faq"
     - title: "Documentation"
       url: "assets/docs/v1/index.html"
       target: "_blank"

@@ -106,7 +106,7 @@
             
             <nav>
                 
-                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-01-Getting-Started.html">Getting Started</a><ul><li><a href="tutorial-01-What-is-RPGWizard.html">What is RPGWizard</a></li><li><a href="tutorial-01-Trying-Out-the-Demo.html">Trying Out the Demo</a></li><li><a href="tutorial-01-FAQ.html">FAQ</a></li></ul></li><li><a href="tutorial-02-Your-First-Game.html">Your First Game</a><ul><li><a href="tutorial-02-Starting-a-New-Project.html">Starting a New Project</a></li><li><a href="tutorial-02-Creating-an-Animation.html">Creating an Animation</a></li><li><a href="tutorial-02-Creating-a-Character.html">Creating a Character</a></li><li><a href="tutorial-02-Creating-a-Tileset.html">Creating a Tileset</a></li><li><a href="tutorial-02-Creating-a-Board.html">Creating a Board</a></li><li><a href="tutorial-02-Creating-a-Board-Layer.html">Creating a Board Layer</a></li><li><a href="tutorial-02-Adding-a-Solid-Board-Vector.html">Adding a Solid Board Vector</a></li><li><a href="tutorial-02-Moving-between-Boards.html">Moving between Boards</a></li><li><a href="tutorial-02-Creating-an-NPC.html">Creating an NPC</a></li><li><a href="tutorial-02-Creating-a-Board-Sprite.html">Creating a Board Sprite</a></li><li><a href="tutorial-02-Creating-an-Inventory-Item.html">Creating an Inventory Item</a></li></ul></li><li><a href="tutorial-03-Programming-Guide.html">Programming Guide</a><ul><li><a href="tutorial-03-Introduction-to-JavaScript.html">Introduction to JavaScript</a></li><li><a href="tutorial-03-Asset-Management.html">Asset Management</a></li><li><a href="tutorial-03-Global-Variables.html">Global Variables</a></li><li><a href="tutorial-03-Working-with-Graphics.html">Working with Graphics</a></li><li><a href="tutorial-03-Working-with-Canvases.html">Working with Canvases</a></li><li><a href="tutorial-03-User-Input.html">User Input</a></li><li><a href="tutorial-03-File-Handling.html">File Handling</a></li></ul></li><li><a href="tutorial-04-Default-Systems.html">Default Systems</a><ul><li><a href="tutorial-04-Setting-up-the-Default-Systems.html">Setup Process</a></li><li><a href="tutorial-04-Title-Screen.html">Title Screen</a></li><li><a href="tutorial-04-Dialog-Window.html">Dialog Window</a></li><li><a href="tutorial-04-Battle-System.html">Battle System</a></li></ul></li><li><a href="tutorial-05-Example-Games.html">Example Games</a><ul><li><a href="tutorial-05-The-Vent.html">The Vent</a></li></ul></li></ul></div>
+                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-01-Getting-Started.html">Getting Started</a><ul><li><a href="tutorial-01-Trying-Out-the-Demo.html">Trying Out the Demo</a></li></ul></li><li><a href="tutorial-02-Your-First-Game.html">Your First Game</a><ul><li><a href="tutorial-02-Starting-a-New-Project.html">Starting a New Project</a></li><li><a href="tutorial-02-Creating-an-Animation.html">Creating an Animation</a></li><li><a href="tutorial-02-Creating-a-Character.html">Creating a Character</a></li><li><a href="tutorial-02-Creating-a-Tileset.html">Creating a Tileset</a></li><li><a href="tutorial-02-Creating-a-Board.html">Creating a Board</a></li><li><a href="tutorial-02-Creating-a-Board-Layer.html">Creating a Board Layer</a></li><li><a href="tutorial-02-Adding-a-Solid-Board-Vector.html">Adding a Solid Board Vector</a></li><li><a href="tutorial-02-Moving-between-Boards.html">Moving between Boards</a></li><li><a href="tutorial-02-Creating-an-NPC.html">Creating an NPC</a></li><li><a href="tutorial-02-Creating-a-Board-Sprite.html">Creating a Board Sprite</a></li><li><a href="tutorial-02-Creating-an-Inventory-Item.html">Creating an Inventory Item</a></li></ul></li><li><a href="tutorial-03-Programming-Guide.html">Programming Guide</a><ul><li><a href="tutorial-03-Introduction-to-JavaScript.html">Introduction to JavaScript</a></li><li><a href="tutorial-03-Asset-Management.html">Asset Management</a></li><li><a href="tutorial-03-Global-Variables.html">Global Variables</a></li><li><a href="tutorial-03-Working-with-Graphics.html">Working with Graphics</a></li><li><a href="tutorial-03-Working-with-Canvases.html">Working with Canvases</a></li><li><a href="tutorial-03-User-Input.html">User Input</a></li><li><a href="tutorial-03-File-Handling.html">File Handling</a></li></ul></li><li><a href="tutorial-04-Default-Systems.html">Default Systems</a><ul><li><a href="tutorial-04-Setting-up-the-Default-Systems.html">Setup Process</a></li><li><a href="tutorial-04-Title-Screen.html">Title Screen</a></li><li><a href="tutorial-04-Dialog-Window.html">Dialog Window</a></li><li><a href="tutorial-04-Battle-System.html">Battle System</a></li></ul></li><li><a href="tutorial-05-Example-Games.html">Example Games</a><ul><li><a href="tutorial-05-The-Vent.html">The Vent</a></li></ul></li></ul></div>
                 
             </nav>
         </div>
@@ -119,13 +119,13 @@
                 <section>
 
 <article>
-    <h1>What are Assets?</h1>
+    <h2>What are Assets?</h2>
 <p>In RPGWizard an &quot;asset&quot; <strong>refers to any sound, image, or program file</strong> that you wish to use in your game at runtime. Before you can play audio, draw images, or call functions from other programs, you must load them into the engine.</p>
 <p>Assets are loaded <strong>asynchronously</strong> meaning they cannot be used until the engine has loaded them. Once an asset has been loaded it will be available in the engine to programs until it is explictly removed, this means you can load up common assets on game startup and access them anytime without needing to wait for them again.</p>
 <p>These files must be available in the <strong>Sounds</strong>, <strong>Graphics</strong>, or <strong>Programs</strong> folder of your project which is where the engine looks for them by default.</p>
-<h1>Loading Assets</h1>
+<h2>Loading Assets</h2>
 <p>To load assets into the engine you will be using a special function provided by the RPGcode API, <a href="images/rpgcode_api_reference/RPGcode.html#loadAssets">rpgcode.loadAssets</a>. This function accepts an object containing the different types of assets that you wish to load into the engine, you also need to provide it with a <strong>callback function</strong> which it will call as soon as the assets are ready for use. Below you will find examples for loading each of the asset types into the engine.</p>
-<h2>Images</h2>
+<h3>Images</h3>
 <pre class="prettyprint source lang-javascript"><code>// An example of an assets object
 var assets = {
     // Images are stored in an array
@@ -137,12 +137,12 @@ rpgcode.loadAssets(assets, function() {
    // They are ready, so do some stuff here...
 });
 </code></pre>
-<h3>Supported Formats</h3>
+<h4>Supported Formats</h4>
 <ul>
 <li>png</li>
 <li>jpeg</li>
 </ul>
-<h2>Audio</h2>
+<h3>Audio</h3>
 <pre class="prettyprint source lang-javascript"><code>// An example of an assets object
 var assets = {
     // Audio is stored in an object
@@ -154,13 +154,13 @@ rpgcode.loadAssets(assets, function() {
    // They are ready, so do some stuff here...
 });
 </code></pre>
-<h3>Supported Formats</h3>
+<h4>Supported Formats</h4>
 <ul>
 <li>wav</li>
 <li>mp3</li>
 <li>ogg</li>
 </ul>
-<h2>Programs</h2>
+<h3>Programs</h3>
 <blockquote>
 <p>IMPORTANT: Only a special type of program called a &quot;module&quot; can be loaded into the engine this way. For example all of the default systems are defined as modules so they can be easily be reused. Writing custom modules will be covered at a later date.</p>
 </blockquote>
@@ -178,7 +178,7 @@ rpgcode.loadAssets(assets, function() {
    // They are ready, so do some stuff here...
 });
 </code></pre>
-<h2>Everything Together</h2>
+<h3>Everything Together</h3>
 <p>You are not limited to loading 1 type of asset at time, you can combine multiple asset types that you want to load in a single statement, and wait for them all to load:</p>
 <pre class="prettyprint source lang-javascript"><code>var assets = {
   &quot;images&quot;: [&quot;block.png&quot;, &quot;startscreen.png&quot;],
@@ -191,7 +191,7 @@ rpgcode.loadAssets(assets, function() {
    // They are ready, so do some stuff here...
 });
 </code></pre>
-<h1>Removing Assets</h1>
+<h2>Removing Assets</h2>
 <blockquote>
 <p>IMPORTANT: The RPGWizard does not manage the amount of memory your assets can consume. It is good practice to remove assets from the engine if they will no longer. This can be done by calling <a href="images/rpgcode_api_reference/RPGcode.html#removeAssets">rpgcode.removeAssets</a>.</p>
 </blockquote>
