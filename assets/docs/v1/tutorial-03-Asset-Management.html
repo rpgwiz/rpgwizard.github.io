@@ -84,6 +84,10 @@
                                 Example Games
                             </a>
                         
+                            <a class="dropdown-item" href="tutorial-06-Advanced-Topics.html">
+                                Advanced Topics
+                            </a>
+                        
                         </div>
                     </div>
                 </div>
@@ -106,7 +110,7 @@
             
             <nav>
                 
-                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-01-Getting-Started.html">Getting Started</a><ul><li><a href="tutorial-01-Trying-Out-the-Demo.html">Trying Out the Demo</a></li></ul></li><li><a href="tutorial-02-Your-First-Game.html">Your First Game</a><ul><li><a href="tutorial-02-Starting-a-New-Project.html">Starting a New Project</a></li><li><a href="tutorial-02-Creating-an-Animation.html">Creating an Animation</a></li><li><a href="tutorial-02-Creating-a-Character.html">Creating a Character</a></li><li><a href="tutorial-02-Creating-a-Tileset.html">Creating a Tileset</a></li><li><a href="tutorial-02-Creating-a-Board.html">Creating a Board</a></li><li><a href="tutorial-02-Creating-a-Board-Layer.html">Creating a Board Layer</a></li><li><a href="tutorial-02-Adding-a-Solid-Board-Vector.html">Adding a Solid Board Vector</a></li><li><a href="tutorial-02-Moving-between-Boards.html">Moving between Boards</a></li><li><a href="tutorial-02-Creating-an-NPC.html">Creating an NPC</a></li><li><a href="tutorial-02-Creating-a-Board-Sprite.html">Creating a Board Sprite</a></li><li><a href="tutorial-02-Creating-an-Inventory-Item.html">Creating an Inventory Item</a></li></ul></li><li><a href="tutorial-03-Programming-Guide.html">Programming Guide</a><ul><li><a href="tutorial-03-Introduction-to-JavaScript.html">Introduction to JavaScript</a></li><li><a href="tutorial-03-Asset-Management.html">Asset Management</a></li><li><a href="tutorial-03-Global-Variables.html">Global Variables</a></li><li><a href="tutorial-03-Working-with-Graphics.html">Working with Graphics</a></li><li><a href="tutorial-03-Working-with-Canvases.html">Working with Canvases</a></li><li><a href="tutorial-03-User-Input.html">User Input</a></li><li><a href="tutorial-03-File-Handling.html">File Handling</a></li></ul></li><li><a href="tutorial-04-Default-Systems.html">Default Systems</a><ul><li><a href="tutorial-04-Setting-up-the-Default-Systems.html">Setup Process</a></li><li><a href="tutorial-04-Title-Screen.html">Title Screen</a></li><li><a href="tutorial-04-Dialog-Window.html">Dialog Window</a></li><li><a href="tutorial-04-Battle-System.html">Battle System</a></li></ul></li><li><a href="tutorial-05-Example-Games.html">Example Games</a><ul><li><a href="tutorial-05-The-Vent.html">The Vent</a></li></ul></li></ul></div>
+                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-01-Getting-Started.html">Getting Started</a><ul><li><a href="tutorial-01-Trying-Out-the-Demo.html">Trying Out the Demo</a></li><li><a href="tutorial-01-Accessing-the-Console.html">Accessing the Console</a></li></ul></li><li><a href="tutorial-02-Your-First-Game.html">Your First Game</a><ul><li><a href="tutorial-02-Starting-a-New-Project.html">Starting a New Project</a></li><li><a href="tutorial-02-Creating-an-Animation.html">Creating an Animation</a></li><li><a href="tutorial-02-Creating-a-Character.html">Creating a Character</a></li><li><a href="tutorial-02-Creating-a-Tileset.html">Creating a Tileset</a></li><li><a href="tutorial-02-Creating-a-Board.html">Creating a Board</a></li><li><a href="tutorial-02-Creating-a-Board-Layer.html">Creating a Board Layer</a></li><li><a href="tutorial-02-Adding-a-Solid-Board-Vector.html">Adding a Solid Board Vector</a></li><li><a href="tutorial-02-Moving-between-Boards.html">Moving between Boards</a></li><li><a href="tutorial-02-Creating-an-NPC.html">Creating an NPC</a></li><li><a href="tutorial-02-Creating-a-Board-Sprite.html">Creating a Board Sprite</a></li><li><a href="tutorial-02-Creating-an-Inventory-Item.html">Creating an Inventory Item</a></li></ul></li><li><a href="tutorial-03-Programming-Guide.html">Programming Guide</a><ul><li><a href="tutorial-03-Hello-World.html">Hello world!</a></li><li><a href="tutorial-03-Introduction-to-JavaScript.html">Introduction to JavaScript</a></li><li><a href="tutorial-03-Asset-Management.html">Asset Management</a></li><li><a href="tutorial-03-Global-Variables.html">Global Variables</a></li><li><a href="tutorial-03-Working-with-Graphics.html">Working with Graphics</a></li><li><a href="tutorial-03-Working-with-Canvases.html">Working with Canvases</a></li><li><a href="tutorial-03-User-Input.html">User Input</a></li><li><a href="tutorial-03-File-Handling.html">File Handling</a></li></ul></li><li><a href="tutorial-04-Default-Systems.html">Default Systems</a><ul><li><a href="tutorial-04-Setting-up-the-Default-Systems.html">Setup Process</a></li><li><a href="tutorial-04-Title-Screen.html">Title Screen</a></li><li><a href="tutorial-04-Dialog-Window.html">Dialog Window</a></li><li><a href="tutorial-04-Battle-System.html">Battle System</a></li><li><a href="tutorial-04-Weather-Effects.html">Weather Effects</a></li></ul></li><li><a href="tutorial-05-Example-Games.html">Example Games</a><ul><li><a href="tutorial-05-The-Vent.html">The Vent</a></li></ul></li><li><a href="tutorial-06-Advanced-Topics.html">Advanced Topics</a><ul><li><a href="tutorial-06-Canvas-2D-Context.html">Canvas 2D Context</a></li><li><a href="tutorial-06-Writing-Modules.html">Writing Modules</a></li></ul></li></ul></div>
                 
             </nav>
         </div>
@@ -121,10 +125,10 @@
 <article>
     <h2>What are Assets?</h2>
 <p>In RPGWizard an &quot;asset&quot; <strong>refers to any sound, image, or program file</strong> that you wish to use in your game at runtime. Before you can play audio, draw images, or call functions from other programs, you must load them into the engine.</p>
-<p>Assets are loaded <strong>asynchronously</strong> meaning they cannot be used until the engine has loaded them. Once an asset has been loaded it will be available in the engine to programs until it is explictly removed, this means you can load up common assets on game startup and access them anytime without needing to wait for them again.</p>
+<p>Assets are loaded <strong>asynchronously</strong> meaning they cannot be used until the engine has loaded them. Once an asset has been loaded it will be available in the engine to programs until it is explicitly removed, this means you can load up common assets on game startup and access them anytime without needing to wait for them again.</p>
 <p>These files must be available in the <strong>Sounds</strong>, <strong>Graphics</strong>, or <strong>Programs</strong> folder of your project which is where the engine looks for them by default.</p>
 <h2>Loading Assets</h2>
-<p>To load assets into the engine you will be using a special function provided by the RPGcode API, <a href="images/rpgcode_api_reference/RPGcode.html#loadAssets">rpgcode.loadAssets</a>. This function accepts an object containing the different types of assets that you wish to load into the engine, you also need to provide it with a <strong>callback function</strong> which it will call as soon as the assets are ready for use. Below you will find examples for loading each of the asset types into the engine.</p>
+<p>To load assets into the engine you will be using a special function provided by the RPGcode API, <a href="Asset.html#loadAssets" target="_blank">rpgcode.loadAssets</a>. This function accepts an object containing the different types of assets that you wish to load into the engine, you also need to provide it with a <strong>callback function</strong> which it will call as soon as the assets are ready for use. Below you will find examples for loading each of the asset types into the engine.</p>
 <h3>Images</h3>
 <pre class="prettyprint source lang-javascript"><code>// An example of an assets object
 var assets = {
@@ -143,6 +147,9 @@ rpgcode.loadAssets(assets, function() {
 <li>jpeg</li>
 </ul>
 <h3>Audio</h3>
+<blockquote>
+<p>NOTE: Audio items are created using key-value pairs, where the key is the ID that you want to associate with a sound file the value.</p>
+</blockquote>
 <pre class="prettyprint source lang-javascript"><code>// An example of an assets object
 var assets = {
     // Audio is stored in an object

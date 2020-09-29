@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Writing Modules</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+             
+                <a href="index.html">
+                    <h1 class="navbar-item">RPGWizard Documentation</h1>
+                </a>
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    API Documentation
+                </a>
+                
+                <div class="dropdown is-hoverable is-right">
+                    <a class="dropdown-trigger link">
+                        Tutorials
+                        <i class="fas fa-chevron-down fa-xs"></i>
+                    </a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-content">
+                        
+                            <a class="dropdown-item" href="tutorial-01-Getting-Started.html">
+                                Getting Started
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-02-Your-First-Game.html">
+                                Your First Game
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-03-Programming-Guide.html">
+                                Programming Guide
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-04-Default-Systems.html">
+                                Default Systems
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-05-Example-Games.html">
+                                Example Games
+                            </a>
+                        
+                            <a class="dropdown-item" href="tutorial-06-Advanced-Topics.html">
+                                Advanced Topics
+                            </a>
+                        
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar tutorials"
+            id="sidebarNav"
+        >
+            
+                <div class="search-wrapper">
+                    <input id="search" type="text" placeholder="Search docs..." class="input">
+                </div>
+            
+            <nav>
+                
+                    <div class="category"><h3>Tutorials</h3><ul><li><a href="tutorial-01-Getting-Started.html">Getting Started</a><ul><li><a href="tutorial-01-Trying-Out-the-Demo.html">Trying Out the Demo</a></li><li><a href="tutorial-01-Accessing-the-Console.html">Accessing the Console</a></li></ul></li><li><a href="tutorial-02-Your-First-Game.html">Your First Game</a><ul><li><a href="tutorial-02-Starting-a-New-Project.html">Starting a New Project</a></li><li><a href="tutorial-02-Creating-an-Animation.html">Creating an Animation</a></li><li><a href="tutorial-02-Creating-a-Character.html">Creating a Character</a></li><li><a href="tutorial-02-Creating-a-Tileset.html">Creating a Tileset</a></li><li><a href="tutorial-02-Creating-a-Board.html">Creating a Board</a></li><li><a href="tutorial-02-Creating-a-Board-Layer.html">Creating a Board Layer</a></li><li><a href="tutorial-02-Adding-a-Solid-Board-Vector.html">Adding a Solid Board Vector</a></li><li><a href="tutorial-02-Moving-between-Boards.html">Moving between Boards</a></li><li><a href="tutorial-02-Creating-an-NPC.html">Creating an NPC</a></li><li><a href="tutorial-02-Creating-a-Board-Sprite.html">Creating a Board Sprite</a></li><li><a href="tutorial-02-Creating-an-Inventory-Item.html">Creating an Inventory Item</a></li></ul></li><li><a href="tutorial-03-Programming-Guide.html">Programming Guide</a><ul><li><a href="tutorial-03-Hello-World.html">Hello world!</a></li><li><a href="tutorial-03-Introduction-to-JavaScript.html">Introduction to JavaScript</a></li><li><a href="tutorial-03-Asset-Management.html">Asset Management</a></li><li><a href="tutorial-03-Global-Variables.html">Global Variables</a></li><li><a href="tutorial-03-Working-with-Graphics.html">Working with Graphics</a></li><li><a href="tutorial-03-Working-with-Canvases.html">Working with Canvases</a></li><li><a href="tutorial-03-User-Input.html">User Input</a></li><li><a href="tutorial-03-File-Handling.html">File Handling</a></li></ul></li><li><a href="tutorial-04-Default-Systems.html">Default Systems</a><ul><li><a href="tutorial-04-Setting-up-the-Default-Systems.html">Setup Process</a></li><li><a href="tutorial-04-Title-Screen.html">Title Screen</a></li><li><a href="tutorial-04-Dialog-Window.html">Dialog Window</a></li><li><a href="tutorial-04-Battle-System.html">Battle System</a></li><li><a href="tutorial-04-Weather-Effects.html">Weather Effects</a></li></ul></li><li><a href="tutorial-05-Example-Games.html">Example Games</a><ul><li><a href="tutorial-05-The-Vent.html">The Vent</a></li></ul></li><li><a href="tutorial-06-Advanced-Topics.html">Advanced Topics</a><ul><li><a href="tutorial-06-Canvas-2D-Context.html">Canvas 2D Context</a></li><li><a href="tutorial-06-Writing-Modules.html">Writing Modules</a></li></ul></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Tutorial</p>
+                    <h1>Writing Modules</h1>
+                </header>
+                <section>
+
+<article>
+    <h2>Summary</h2>
+<p>Modules are pieces of reusable JavaScript code that are globally loaded in the engine at runtime, they are commonly used for things like libraries. All of the RPGWizard default systems are written and loaded as modules or &quot;program assets&quot;.</p>
+<p>Typically you write modules <strong>if you want to reuse parts of your code across your game</strong>, e.g. UI drawing, they are also useful for sharing parts of projects with others in a standalone way.</p>
+<p>The RPGWizard module system is built upon <a href="https://requirejs.org/" target="_blank">requirejs</a>, here we are going to show you how you can write a simple module.</p>
+<h2>Steps</h2>
+<h3>Module Structure</h3>
+<p>There are actually many ways to write self-contained modules in JavaScript but for this example we'll stick to <a href="https://www.w3schools.com/js/js_object_prototypes.asp" target="_blank">JavaScript Object Prototypes</a>, which have a pretty straightforward structure.</p>
+<p>In general you simply need to ensure the following is in place:</p>
+<ol>
+<li>Create a single instance of your module for global use, best to put this at the start.</li>
+<li>Declare a suitable Constructor for your module that you want to run on load.</li>
+<li>Define any number of functions that you want to be able to access.</li>
+</ol>
+<p>Below is a very simple example of a module named &quot;MyModule&quot;, which shows all the basic features of using modules:</p>
+<pre class="prettyprint source lang-javascript"><code>// 1: Actual instance of the module to be used globally
+let myModule = new MyModule();
+
+// 2: Module Constructor
+function MyModule() {
+   // Properties of this module
+   this._lineEnding = &quot; world!&quot;;
+}
+
+// 3: Module Function declarations
+MyModule.prototype.show = function(text) {
+   // Draw the text at (30, 30)
+   rpgcode.drawText(30, 30, text + this._lineEnding);
+   rpgcode.renderNow();
+};
+</code></pre>
+<h3>Loading and Using a Module</h3>
+<p>Using our module is extremely simple, we just need to load it as a program asset:</p>
+<blockquote>
+<p>IMPORTANT: Only modules should be loaded as program assets like this!</p>
+</blockquote>
+<pre class="prettyprint source lang-javascript"><code>let assets = {
+  &quot;programs&quot;: [
+      // Default systems.
+      &quot;MyModule.js&quot;
+  ]
+};
+
+rpgcode.loadAssets(assets, async function() {
+
+  myModule.show(&quot;hello&quot;);
+  rpgcode.endProgram();
+
+});
+</code></pre>
+<h3>Complete Examples</h3>
+<p>For in-depth examples of modules in RPGWizard and their uses see any of the default systems:</p>
+<ul>
+<li><a href="https://github.com/swordmaster2k/rpgwizard/tree/develop/demo/The%20Wizard's%20Tower/Programs/defaults" target="_blank">Default Systems</a></li>
+</ul>
+</article>
+
+</section>
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a></p>
+                    <p class="sidebar-created-by">
+                        <a href="https://github.com/SoftwareBrothers/better-docs" target="_blank">BetterDocs theme</a> provided with <i class="fas fa-heart"></i> by 
+                        <a href="http://softwarebrothers.co" target="_blank">SoftwareBrothers - JavaScript Development Agency</a>
+                    </p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+<script src="scripts/search.js"> </script>
+
+</body>
+</html>
