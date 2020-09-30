@@ -5,7 +5,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Title Screen</title>
+  <title> Sprite Threads</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -118,49 +118,140 @@
             <div class="content">
                 <header class="page-title">
                     <p>Tutorial</p>
-                    <h1>Title Screen</h1>
+                    <h1>Sprite Threads</h1>
                 </header>
                 <section>
 
 <article>
     <h2>Summary</h2>
-<p>At the moment the default title screen bundled with the RPGWizard is very simple, and only supports specifying the background image, and the music to play. It has a single menu option &quot;New Game&quot; that can be used to delay the start of your game, in the demo project it triggers the story introduction.</p>
-<p><img src="images/default_systems/02_title_screen/images/1.gif" alt=""></p>
-<h2>Steps</h2>
-<p>To use the default title screen in your own project you will only need a few lines of code, you simply need to load the title screen program and its dependencies. After that you can specify what background image and music you want to use, and the title screen will deal with loading and displaying them. In the table below you will find all the key inputs that the title screen listens for:</p>
+<p>A game with static sprites is no fun at all! You might be wondering how you can
+bring life to everyone in your game world, like making them move around,
+or have them chase the player? Well look no further than the Sprite Thread!</p>
+<h2>When and when not to use them</h2>
+<h3>Use them for</h3>
 <ul>
-<li><strong>Enter</strong>
+<li>Simple idling or wandering for NPCs and Enemies.</li>
+<li>Moving objects such as projectiles, e.g. arrows.</li>
+<li>Enemy AI, chasing the player can be achieved with sprite threads.</li>
+</ul>
+<h3>Don't use them for</h3>
 <ul>
-<li>Fires the callback function that was supplied to the title screens own show function, ending the display of the title screen.</li>
+<li>Anything that needs to last longer than the life of a sprite, e.g. UI programs.</li>
+</ul>
+<h2>Key things about Threads</h2>
+<blockquote>
+<p>NOTE: Threads in RPGWizard aren't &quot;true threads&quot; since the engine is largely single-threaded, instead they give the illusion of threading, as they are run frequently enough.</p>
+</blockquote>
+<ul>
+<li><strong>Don't use rpgcode.endProgram in programs meant for Sprite Threads.</strong>
+<ul>
+<li>Threads are constantly being executed start to finish by the engine.</li>
+<li>Instead use control variables to ensure executions don't overlap.</li>
 </ul>
 </li>
 </ul>
-<p>You learn more about how to use and configure the title screen from its API Reference. An example of how the title screen above was created can be seen in the following code snippet:</p>
-<pre class="prettyprint source lang-javascript"><code>// Declare the program assets we will need to load.
-var assets = {
-  &quot;programs&quot;: [
-      &quot;defaults/gui.js&quot;,
-      &quot;defaults/titleScreen.js&quot;
-  ]
-};
+<br/>
+<ul>
+<li><strong>Each sprite on a board has their own copy of the thread code.</strong>
+<ul>
+<li>Variables won't be shared amongst the sprites, unless you use Globals.</li>
+<li>When the Sprite is destroyed so too will be the running thread.</li>
+</ul>
+</li>
+</ul>
+<br/>
+<ul>
+<li><strong>Slow running threads will slow the engine down!</strong>
+<ul>
+<li>Stick to simple calculations to avoid game slowdowns.</li>
+<li>Or put things on delayed callbacks so they don't execute often.</li>
+</ul>
+</li>
+</ul>
+<br/>
+<ul>
+<li><strong>If you want to prevent a sprite thread from executing use return.</strong>
+<ul>
+<li>Use the JavaScript <strong>return;</strong> statement at the highest level of the thread.</li>
+<li>When nested in functions, use a chain of return statements.</li>
+</ul>
+</li>
+</ul>
+<br/>
+<hr>
+<h2>Example Usage</h2>
+<h3>Idling Behaviour</h3>
+<p>We are going to look at a simple example of how you can use <strong>Sprite Threading</strong> to
+animate sprites on a board by creating a sprite that infinitely wanders.</p>
+<p>The sprite will behave in the following ways:</p>
+<ul>
+<li>Infinitely wander around in different directions.</li>
+<li>Move a set distance of pixels in each direction.</li>
+<li>Complete each directional walk in a fixed time.</li>
+</ul>
+<p><img src="images/programming_guide/07_sprite_threads/images/1.gif" alt=""></p>
+<br/>
+<h4>The Code</h4>
+<pre class="prettyprint source lang-javascript"><code>// 1: Behavior for a passive sprite that wanders randomly around the board.
+var wanderDistancePx = 80;   // px
+var wanderTime = 2500;       // ms
+var entity = this;
 
-rpgcode.loadAssets(assets, function() {
+// 2: Control variable, this if-statement will only run one time, after which
+// the sprite will be infinitely wandering
+if (!entity.wandering) {
+    entity.wandering = true; // We are now wandering forever.
+    doWander();
+}
 
-   // Specify the config options for the title screen to use.
-   var config = {
-   &quot;backgroundImage&quot;: &quot;startscreen.png&quot;,
-   &quot;titleScreenMusic&quot;: &quot;intro.ogg&quot;
-   };
+// 3: A simple wandering function which calls itself infinitely
+function doWander() {
+   var id = entity.sprite.id;
 
-   // Show the title screen.
-   titleScreen.show(config, function() {
-      // The player pressed &quot;ENTER&quot; ending the titlescreen.
-      // Let's continue with the rest of the game.
+   // 4: Pick a random direction and shift the sprites pixel location a little
+   var choice = getRandomDirection();
+   if (choice === &quot;EAST&quot;) {
+      velocityX = wanderDistancePx;
+      velocityY = 0;
+      rpgcode.setSpriteStance(id, &quot;EAST&quot;);
+   } else if (choice === &quot;WEST&quot;) {
+      velocityX = -wanderDistancePx;
+      velocityY = 0;
+      rpgcode.setSpriteStance(id, &quot;WEST&quot;);
+   } else if (choice === &quot;SOUTH&quot;) {
+      velocityY = wanderDistancePx;
+      velocityX = 0;
+      rpgcode.setSpriteStance(id, &quot;SOUTH&quot;);
+   } else {
+      velocityY = -wanderDistancePx;
+      velocityX = 0;
+      rpgcode.setSpriteStance(id, &quot;NORTH&quot;);
+   }
 
-      rpgcode.endProgram();
-   });
-});
+   // 5: Move around forever by calling doWander infinitely
+   rpgcode.moveSpriteTo(id, entity.x + velocityX, entity.y + velocityY, wanderTime, doWander);
+}
+
+// 6: Simple function to get a random direction
+function getRandomDirection() {
+   const directions = [&quot;EAST&quot;, &quot;WEST&quot;, &quot;NORTH&quot;, &quot;SOUTH&quot;];
+   return directions[Math.floor(Math.random() * directions.length)];
+}
 </code></pre>
+<br/>
+<h4>Attaching it to a Sprite</h4>
+<p>To attach a program to a sprite as a thread, select the sprite on the board and the properties tab select the program that you want to use:</p>
+<p><img src="images/programming_guide/07_sprite_threads/images/2.png" alt=""></p>
+<br/>
+<p>After that all you need to do is enter the board with the sprite during gameplay and watch it endlessly run around!</p>
+<h2>More Advanced Examples</h2>
+<p>You can find a number of examples of how to use Sprite Threads for Enemy and NPC
+AI scattered across the demo games, here is a short list of the most interesting
+ones:</p>
+<ul>
+<li><a href="https://github.com/rpgwiz/tutorials/blob/master/TheVent/Programs/custom/enemy.js" target="_blank">Chasing Enemy from The Vent game</a></li>
+<li><a href="https://github.com/rpgwiz/tutorials/blob/master/TheVent/Programs/Idle.js" target="_blank">Idling Dog from The Vent Game</a></li>
+</ul>
 </article>
 
 </section>

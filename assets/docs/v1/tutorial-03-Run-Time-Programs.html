@@ -5,7 +5,7 @@
   
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Title Screen</title>
+  <title> Run Time Programs</title>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -118,49 +118,181 @@
             <div class="content">
                 <header class="page-title">
                     <p>Tutorial</p>
-                    <h1>Title Screen</h1>
+                    <h1>Run Time Programs</h1>
                 </header>
                 <section>
 
 <article>
     <h2>Summary</h2>
-<p>At the moment the default title screen bundled with the RPGWizard is very simple, and only supports specifying the background image, and the music to play. It has a single menu option &quot;New Game&quot; that can be used to delay the start of your game, in the demo project it triggers the story introduction.</p>
-<p><img src="images/default_systems/02_title_screen/images/1.gif" alt=""></p>
-<h2>Steps</h2>
-<p>To use the default title screen in your own project you will only need a few lines of code, you simply need to load the title screen program and its dependencies. After that you can specify what background image and music you want to use, and the title screen will deal with loading and displaying them. In the table below you will find all the key inputs that the title screen listens for:</p>
+<p>Sometimes you need a program to run for longer than just a single event or the
+life span of a sprite to create things like HUDs and Weather Effects.</p>
+<p>Enter the Run Time Program, always running, always updating, and it will not stop,
+until it is stopped!</p>
+<h2>When and when not to use them</h2>
+<h3>Use them for</h3>
 <ul>
-<li><strong>Enter</strong>
+<li>Long lived programs, that need to run across board environments.</li>
+<li>Things like Graphical UIs are a good application of them.
 <ul>
-<li>Fires the callback function that was supplied to the title screens own show function, ending the display of the title screen.</li>
+<li>HUDs are a common use case.</li>
+</ul>
+</li>
+<li>Weather, Day &amp; Night cycles, Clocks, etc.
+<ul>
+<li>Anything that is constantly happening in your game!</li>
 </ul>
 </li>
 </ul>
-<p>You learn more about how to use and configure the title screen from its API Reference. An example of how the title screen above was created can be seen in the following code snippet:</p>
-<pre class="prettyprint source lang-javascript"><code>// Declare the program assets we will need to load.
-var assets = {
-  &quot;programs&quot;: [
-      &quot;defaults/gui.js&quot;,
-      &quot;defaults/titleScreen.js&quot;
-  ]
-};
+<h3>Don't use them for</h3>
+<ul>
+<li>Short lived things, that only happen in very specific circumstances.
+<ul>
+<li>Instead try to use Events or Sprite Threads if possible.</li>
+</ul>
+</li>
+</ul>
+<h2>Key things about Run Time Programs</h2>
+<ul>
+<li><strong>Don't use rpgcode.endProgram in programs meant for Run Time.</strong>
+<ul>
+<li>Run Time Programs are constantly being executed start to finish by the engine.</li>
+<li>Instead use control variables to ensure executions don't overlap.</li>
+</ul>
+</li>
+</ul>
+<br/>
+<ul>
+<li><strong>Run Times will keep being called until they are destroyed.</strong>
+<ul>
+<li>Its good practice to destroy a Run Time program once you are done with it.</li>
+</ul>
+</li>
+</ul>
+<br/>
+<ul>
+<li><strong>Slow running Run Times will slow the engine down!</strong>
+<ul>
+<li>Stick to simple calculations to avoid game slowdowns.</li>
+<li>Or put things on delayed callbacks so they don't execute often.</li>
+</ul>
+</li>
+</ul>
+<br/>
+<ul>
+<li><strong>If you want to prevent a Run Time from executing use return.</strong>
+<ul>
+<li>Use the JavaScript <strong>return;</strong> statement at the highest level of the Run Time.</li>
+<li>When nested in functions, use a chain of return statements.</li>
+</ul>
+</li>
+</ul>
+<br/>
+<hr>
+<h2>Example Usage</h2>
+<h3>Character Health</h3>
+<p>One of the most common applications for a Run Time is something like a HUD, which
+typically tells the player in realtime important stats about their current health,
+ammo, magic power, etc.</p>
+<p>We are going to create a basic yet functional HUD program that displays the
+character's current health.</p>
+<p><img src="images/programming_guide/08_run_time_programs/images/1.gif" alt=""></p>
+<br/>
+<h4>The Code</h4>
+<p>For the most basic version of this program all we need to do is the following:</p>
+<ol>
+<li>Get the current character.</li>
+<li>Clear the current screen.</li>
+<li>Draw the health back to the screen.</li>
+</ol>
+<p>To achieve this all we need is a couple of lines of code:</p>
+<pre class="prettyprint source lang-javascript"><code>// NOTE: You don't need to use endProgram for a Run Time, they are always running!
 
-rpgcode.loadAssets(assets, function() {
+// 1: Get the current character
+const character = rpgcode.getCharacter();
 
-   // Specify the config options for the title screen to use.
-   var config = {
-   &quot;backgroundImage&quot;: &quot;startscreen.png&quot;,
-   &quot;titleScreenMusic&quot;: &quot;intro.ogg&quot;
-   };
-
-   // Show the title screen.
-   titleScreen.show(config, function() {
-      // The player pressed &quot;ENTER&quot; ending the titlescreen.
-      // Let's continue with the rest of the game.
-
-      rpgcode.endProgram();
-   });
-});
+// 2: Draw the current character's health to the screen.
+rpgcode.clearCanvas();
+rpgcode.setColor(255, 255, 255, 1);
+rpgcode.drawText(30, 30, &quot;Health: &quot; + character.health + &quot;/&quot; + character.maxHealth);
+rpgcode.renderNow();
 </code></pre>
+<br/>
+<p>If you run this program you should end up with something like this:</p>
+<p><img src="images/programming_guide/08_run_time_programs/images/2.png" alt=""></p>
+<br/>
+<h4>Running at Startup</h4>
+<p>The next thing we want to do is get this program running constantly in the
+background displaying changes to the character's health as they occur.</p>
+<p>To achieve this you'll need to add the following to your <strong>Startup</strong> program,
+make sure to pass the name you gave your program!</p>
+<pre class="prettyprint source lang-javascript"><code>// Add this into your Startup program
+rpgcode.addRunTimeProgram(&quot;health.js&quot;);
+</code></pre>
+<br/>
+<p>This tells the engine that you want this particular program to run in the
+background constantly until you tell it to stop.</p>
+<p>If you play your game now you should see the health counter at the top. Open a
+console using F12 you can run the following to test it out:</p>
+<pre class="prettyprint source lang-javascript"><code>rpgcode.getCharacter().health -= 1;
+</code></pre>
+<br/>
+<h4>Removing a Run Time Program</h4>
+<p>To remove a Run Time from the engine simply call:</p>
+<pre class="prettyprint source lang-javascript"><code>rpgcode.removeRunTimeProgram(&quot;health.js&quot;);
+</code></pre>
+<br/>
+<h4>Optimising our Run Time Program</h4>
+<p>We can optimise our HUD drawing code by only updating the screen when the health
+has actually changed since the last check.</p>
+<p>To do this we'll introduce a Global named &quot;lastHealth&quot;, this will be used to store
+the last health value of the character. We can check against our previous value
+stored in the Global and decide whether or not the screen needs updating.</p>
+<p>If the health doesn't need updating we can simply use the <strong>return</strong> statement
+to make sure the Run Time Program stops executing.</p>
+<pre class="prettyprint source lang-javascript"><code>// NOTE: You don't need to use endProgram for a Run Time, they are always running!
+
+// 1: Get the current character
+const character = rpgcode.getCharacter();
+
+// 2: Check to see if our Global exists yet
+if (rpgcode.getGlobal(&quot;lastHealth&quot;)) {
+
+   // 2a: It does now check to see if it has changed since last time
+   if (rpgcode.getGlobal(&quot;lastHealth&quot;) === character.health) {
+
+      // There is no change, leave the Run Time Program
+      return;
+
+   } else {
+
+      // There is a change update it
+      rpgcode.setGlobal(&quot;lastHealth&quot;, character.health);
+
+   }
+
+} else {
+
+   // 2c: Global doesn't exist, record the current character health
+   //     will check against it next time
+   rpgcode.setGlobal(&quot;lastHealth&quot;, character.health);
+
+}
+
+// 3: Draw the current character's health to the screen.
+//    Will only reach here if the health has actually changed
+rpgcode.clearCanvas();
+rpgcode.setColor(255, 255, 255, 1);
+rpgcode.drawText(30, 30, &quot;Health: &quot; + character.health + &quot;/&quot; + character.maxHealth);
+rpgcode.renderNow();
+</code></pre>
+<br/>
+<h2>More Advanced Examples</h2>
+<p>You can find a number of examples of how to use Run Time programs for Weather,
+Day &amp; Night, to HUDs scattered across the demo games, here is a short list of
+the most interesting ones:</p>
+<ul>
+<li><a href="https://github.com/swordmaster2k/rpgwizard/blob/develop/demo/The%20Wizard's%20Tower/Programs/defaults/weather.js" target="_blank">Default Weather Effects</a></li>
+</ul>
 </article>
 
 </section>
