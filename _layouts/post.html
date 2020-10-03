@@ -6,3 +6,6 @@ layout: page
 {% if page.badges %}{% for badge in page.badges %}<span class="badge badge-{{ badge.type }}">{{ badge.tag }}</span>{% endfor %}{% endif %}
 <span class="post-date" style="font-style: italic;">{{ page.date | date: "%B %d, %Y" }}</span>
 {{ content }}
+
+<script src="/site/assets/js/jquery-3.3.1/jquery-3.3.1.min.js"></script>
+{% include comments.html element=".td-content" github_account="rpgwiz/site" require_cookie_consent="true" %}

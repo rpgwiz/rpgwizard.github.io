@@ -18,15 +18,15 @@ title: RPGWizard
 email: your-email@domain.com
 author: RPGWizard
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  RPGWizard is an open-source 2D game creation tool that specialises in
+  making RPGs. It comes with a graphical editor and browser based game engine,
+  both of which are completely free-to-use.
 
 # DO NOT CHANGE THE LINE OF THIS FILE without editing .circleci/circle_urls.sh
 baseurl: "/site" # the subpath of your site, e.g. /blog
 
 # This is mostly for testing
-url: "https://vsoch.github.io" # the base hostname & protocol for your site
+url: "https://rpgwiz.github.io/" # the base hostname & protocol for your site
 
 # Social (First three Required)
 repo: "https://github.com/swordmaster2k/rpgwizard"
