@@ -225,13 +225,7 @@
     
     
     <div class="description">
-        Fires a ray from its origin in the direction and report entities that intersect 
-with it, given the parameter constraints.
-
-This will return any characters, enemies, NPCs, and SOLID vectors caught in the path of the 
-raycast enclosing them inside an object.
-
-If no layer is specified, the origin layer will be the player's current.
+        Fires a ray from its origin in the direction and report entities that intersect with it, given the parameter constraints.This will return any characters, enemies, NPCs, and SOLID vectors caught in the path of the raycast enclosing them inside an object.If no layer is specified, the origin layer will be the player's current.
     </div>
     
 
@@ -383,7 +377,7 @@ If no layer is specified, the origin layer will be the player's current.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1186">line 1186</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1228">line 1228</a>
             </span>
         </p>
     
@@ -437,26 +431,7 @@ If no layer is specified, the origin layer will be the player's current.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var hits = rpgcode.fireRaycast({
-    _x: location.x,
-    _y: location.y,
-    _layer: location.layer // Optional
- }, vector, 13);
- hits["characters"].forEach(function(character) {
-     rpgcode.log(character);
- });
- hits["enemies"].forEach(function(sprite) {
-     rpgcode.log(sprite.enemy);
- });
- hits["npcs"].forEach(function(sprite) {
-     rpgcode.log(sprite.npc);
- });
- hits["solids"].forEach(function(solid) {
-     rpgcode.log(solid.distance);
-     rpgcode.log(solid.x);
-     rpgcode.log(solid.y);
- });
- rpgcode.endProgram();</code></pre>
+        <pre class="prettyprint"><code>var hits = rpgcode.fireRaycast({    _x: location.x,    _y: location.y,    _layer: location.layer // Optional }, vector, 13); hits["characters"].forEach(function(character) {     rpgcode.log(character); }); hits["enemies"].forEach(function(sprite) {     rpgcode.log(sprite.enemy); }); hits["npcs"].forEach(function(sprite) {     rpgcode.log(sprite.npc); }); hits["solids"].forEach(function(solid) {     rpgcode.log(solid.distance);     rpgcode.log(solid.x);     rpgcode.log(solid.y); }); rpgcode.endProgram();</code></pre>
     
 
 
@@ -657,7 +632,7 @@ If no layer is specified, the origin layer will be the player's current.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1271">line 1271</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1313">line 1313</a>
             </span>
         </p>
     
@@ -711,8 +686,7 @@ If no layer is specified, the origin layer will be the player's current.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Get the angle in radians between two points.
-var angle = rpgcode.getAngleBetweenPoints(location.x, location.y, this.x, this.y);</code></pre>
+        <pre class="prettyprint"><code>// Get the angle in radians between two points.var angle = rpgcode.getAngleBetweenPoints(location.x, location.y, this.x, this.y);</code></pre>
     
 
 
@@ -913,7 +887,7 @@ var angle = rpgcode.getAngleBetweenPoints(location.x, location.y, this.x, this.y
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1384">line 1384</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1426">line 1426</a>
             </span>
         </p>
     
@@ -967,8 +941,7 @@ var angle = rpgcode.getAngleBetweenPoints(location.x, location.y, this.x, this.y
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Get the distance between two points in pixels.
-var distance = rpgcode.getDistanceBetweenPoints(location.x, location.y, this.x, this.y);</code></pre>
+        <pre class="prettyprint"><code>// Get the distance between two points in pixels.var distance = rpgcode.getDistanceBetweenPoints(location.x, location.y, this.x, this.y);</code></pre>
     
 
 
@@ -1142,7 +1115,7 @@ var distance = rpgcode.getDistanceBetweenPoints(location.x, location.y, this.x, 
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3324">line 3324</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3542">line 3542</a>
             </span>
         </p>
     
@@ -1290,7 +1263,7 @@ var distance = rpgcode.getDistanceBetweenPoints(location.x, location.y, this.x, 
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3349">line 3349</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3567">line 3567</a>
             </span>
         </p>
     
@@ -1484,7 +1457,7 @@ var distance = rpgcode.getDistanceBetweenPoints(location.x, location.y, this.x, 
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3332">line 3332</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3550">line 3550</a>
             </span>
         </p>
     
@@ -1655,7 +1628,7 @@ var distance = rpgcode.getDistanceBetweenPoints(location.x, location.y, this.x, 
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3341">line 3341</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3559">line 3559</a>
             </span>
         </p>
     

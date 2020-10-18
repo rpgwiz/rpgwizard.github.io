@@ -347,7 +347,7 @@
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line434">line 434</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line445">line 445</a>
             </span>
         </p>
     
@@ -376,16 +376,7 @@
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Create a simple canvas and write some text on it.
-var canvas = "myCanvas";
-rpgcode.createCanvas(640, 480, canvas);
-rpgcode.drawText(270, 300, "Hello world!", canvas);
-rpgcode.renderNow(canvas);
-
-// Clears the canvas after 5 seconds have elapsed.
-rpgcode.delay(5000, function(){ 
- rpgcode.clearCanvas(canvas); 
-});</code></pre>
+        <pre class="prettyprint"><code>// Create a simple canvas and write some text on it.var canvas = "myCanvas";rpgcode.createCanvas(640, 480, canvas);rpgcode.drawText(270, 300, "Hello world!", canvas);rpgcode.renderNow(canvas);// Clears the canvas after 5 seconds have elapsed.rpgcode.delay(5000, function(){  rpgcode.clearCanvas(canvas); });</code></pre>
     
 
 
@@ -409,8 +400,7 @@ rpgcode.delay(5000, function(){
     
     
     <div class="description">
-        Creates a canvas with the specified width, height, and ID. This canvas will 
-not be drawn until renderNow is called with its ID.
+        Creates a canvas with the specified width, height, and ID. This canvas will not be drawn until renderNow is called with its ID.
     </div>
     
 
@@ -562,7 +552,7 @@ not be drawn until renderNow is called with its ID.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line486">line 486</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line497">line 497</a>
             </span>
         </p>
     
@@ -591,11 +581,7 @@ not be drawn until renderNow is called with its ID.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Create a simple canvas and write some text on it.
-var canvas = "myCanvas";
-rpgcode.createCanvas(640, 480, canvas);
-rpgcode.drawText(270, 300, "Hello world!", canvas);
-rpgcode.renderNow(canvas); </code></pre>
+        <pre class="prettyprint"><code>// Create a simple canvas and write some text on it.var canvas = "myCanvas";rpgcode.createCanvas(640, 480, canvas);rpgcode.drawText(270, 300, "Hello world!", canvas);rpgcode.renderNow(canvas); </code></pre>
     
 
 
@@ -721,7 +707,7 @@ rpgcode.renderNow(canvas); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line545">line 545</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line556">line 556</a>
             </span>
         </p>
     
@@ -750,14 +736,7 @@ rpgcode.renderNow(canvas); </code></pre>
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Create a simple canvas and write some text on it.
-var canvas = "myCanvas";
-rpgcode.createCanvas(640, 480, canvas);
-rpgcode.drawText(270, 300, "Hello world!", canvas);
-rpgcode.renderNow(canvas); 
-
-// Destroys the canvas that we just created.
-rpgcode.destroyCanvas(canvas);</code></pre>
+        <pre class="prettyprint"><code>// Create a simple canvas and write some text on it.var canvas = "myCanvas";rpgcode.createCanvas(640, 480, canvas);rpgcode.drawText(270, 300, "Hello world!", canvas);rpgcode.renderNow(canvas); // Destroys the canvas that we just created.rpgcode.destroyCanvas(canvas);</code></pre>
     
 
 
@@ -781,8 +760,7 @@ rpgcode.destroyCanvas(canvas);</code></pre>
     
     
     <div class="description">
-        Draws the source canvas onto the target canvas. Useful for combining multiple
-canvases together.
+        Draws the source canvas onto the target canvas. Useful for combining multiplecanvases together.
     </div>
     
 
@@ -1009,7 +987,7 @@ canvases together.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line813">line 813</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line855">line 855</a>
             </span>
         </p>
     
@@ -1038,36 +1016,7 @@ canvases together.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Canvas IDs.
-var buffer = "buffer";
-var lifeIcon = "life_icon";
-
-// Assets to load up.
-var assets = {
- "images": [
-     "life.png"
- ]
-};
-
-// Load up the assets needed for this example.
-rpgcode.loadAssets(assets, function () {
- // Smaller canvas.
- rpgcode.createCanvas(32, 32, lifeIcon);
-
- // Canvas to draw onto.
- rpgcode.createCanvas(640, 480, buffer);
-
- // Set the image on the smaller canvas.
- rpgcode.setImage("life.png", 0, 0, 32, 32, lifeIcon);
- 
- // Draw 3 hearts onto the buffer canvas.
- for (var i = 1; i &lt; 4; i++) {
-     rpgcode.drawOntoCanvas(lifeIcon, i * 32, 430, 32, 32, buffer);
- }
- 
- // Show the larger canvas with the smaller hearts on it.
- rpgcode.renderNow(buffer);
-});</code></pre>
+        <pre class="prettyprint"><code>// Canvas IDs.var buffer = "buffer";var lifeIcon = "life_icon";// Assets to load up.var assets = { "images": [     "life.png" ]};// Load up the assets needed for this example.rpgcode.loadAssets(assets, function () { // Smaller canvas. rpgcode.createCanvas(32, 32, lifeIcon); // Canvas to draw onto. rpgcode.createCanvas(640, 480, buffer); // Set the image on the smaller canvas. rpgcode.setImage("life.png", 0, 0, 32, 32, lifeIcon);  // Draw 3 hearts onto the buffer canvas. for (var i = 1; i &lt; 4; i++) {     rpgcode.drawOntoCanvas(lifeIcon, i * 32, 430, 32, 32, buffer); }  // Show the larger canvas with the smaller hearts on it. rpgcode.renderNow(buffer);});</code></pre>
     
 
 
@@ -1213,7 +1162,7 @@ rpgcode.loadAssets(assets, function () {
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2442">line 2442</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2602">line 2602</a>
             </span>
         </p>
     
@@ -1242,17 +1191,7 @@ rpgcode.loadAssets(assets, function () {
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Draw a rectangle on the default canvas and render it.
-rpgcode.setColor(255, 0, 0, 1.0);
-rpgcode.fillRect(0, 0, 100, 100);
-rpgcode.renderNow();
-
-// Create a canvas and draw a red rectangle on it.
-var canvas = "myCanvas";
-rpgcode.createCanvas(640, 480, canvas);
-rpgcode.setColor(255, 0, 0, 1.0);
-rpgcode.fillRect(0, 0, 100, 100, canvas);
-rpgcode.renderNow(canvas);  </code></pre>
+        <pre class="prettyprint"><code>// Draw a rectangle on the default canvas and render it.rpgcode.setColor(255, 0, 0, 1.0);rpgcode.fillRect(0, 0, 100, 100);rpgcode.renderNow();// Create a canvas and draw a red rectangle on it.var canvas = "myCanvas";rpgcode.createCanvas(640, 480, canvas);rpgcode.setColor(255, 0, 0, 1.0);rpgcode.fillRect(0, 0, 100, 100, canvas);rpgcode.renderNow(canvas);  </code></pre>
     
 
 
@@ -1428,7 +1367,7 @@ rpgcode.renderNow(canvas);  </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2588">line 2588</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2806">line 2806</a>
             </span>
         </p>
     
@@ -1457,15 +1396,7 @@ rpgcode.renderNow(canvas);  </code></pre>
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Create a canvas and draw a red rectangle on it.
-var canvas = "myCanvas";
-rpgcode.createCanvas(640, 480, canvas);
-rpgcode.setColor(255, 0, 0, 1.0);
-rpgcode.fillRect(0, 0, 100, 100, canvas);
-rpgcode.renderNow(canvas);
-
-// Now move it to a new position relative to its parent.
-rpgcode.setCanvasPosition(100, 100, canvas);</code></pre>
+        <pre class="prettyprint"><code>// Create a canvas and draw a red rectangle on it.var canvas = "myCanvas";rpgcode.createCanvas(640, 480, canvas);rpgcode.setColor(255, 0, 0, 1.0);rpgcode.fillRect(0, 0, 100, 100, canvas);rpgcode.renderNow(canvas);// Now move it to a new position relative to its parent.rpgcode.setCanvasPosition(100, 100, canvas);</code></pre>
     
 
 

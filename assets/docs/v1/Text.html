@@ -225,8 +225,7 @@
     
     
     <div class="description">
-        Draws the text on the canvas starting at the specified (x, y) position, if no 
-canvas is specified it defaults to the "renderNowCanvas".
+        Draws the text on the canvas starting at the specified (x, y) position, if no canvas is specified it defaults to the "renderNowCanvas".
     </div>
     
 
@@ -459,7 +458,7 @@ canvas is specified it defaults to the "renderNowCanvas".
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line959">line 959</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1001">line 1001</a>
             </span>
         </p>
     
@@ -488,15 +487,7 @@ canvas is specified it defaults to the "renderNowCanvas".
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Display the text on the default canvas.
-rpgcode.drawText(270, 300, "Hello world!");
-rpgcode.renderNow();
-
-// Display the text on a custom canvas.
-var canvas = "myCanvas";
-rpgcode.createCanvas(640, 480, canvas);
-rpgcode.drawText(270, 300, "Hello world!", canvas);
-rpgcode.renderNow(canvas); </code></pre>
+        <pre class="prettyprint"><code>// Display the text on the default canvas.rpgcode.drawText(270, 300, "Hello world!");rpgcode.renderNow();// Display the text on a custom canvas.var canvas = "myCanvas";rpgcode.createCanvas(640, 480, canvas);rpgcode.drawText(270, 300, "Hello world!", canvas);rpgcode.renderNow(canvas); </code></pre>
     
 
 
@@ -520,8 +511,7 @@ rpgcode.renderNow(canvas); </code></pre>
     
     
     <div class="description">
-        Measures text as it would appear on a canvas using the current font, returning
-the width and height of the text in pixels.
+        Measures text as it would appear on a canvas using the current font, returningthe width and height of the text in pixels.
     </div>
     
 
@@ -623,7 +613,7 @@ the width and height of the text in pixels.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2041">line 2041</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2201">line 2201</a>
             </span>
         </p>
     
@@ -677,9 +667,7 @@ the width and height of the text in pixels.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var dimensions = rpgcode.measureText("Hello world");
-rpgcode.log(dimensions.width);
-rpgcode.log(dimensions.height);</code></pre>
+        <pre class="prettyprint"><code>var dimensions = rpgcode.measureText("Hello world");rpgcode.log(dimensions.width);rpgcode.log(dimensions.height);</code></pre>
     
 
 
@@ -703,9 +691,7 @@ rpgcode.log(dimensions.height);</code></pre>
     
     
     <div class="description">
-        Sets the engine's font to the specified size, and font family. Custom fonts
-need to be installed on the user's system to work. For a list of builtin fonts
-see: <a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp">CSS Websafe Fonts</a>
+        Sets the engine's font to the specified size, and font family. Custom fontsneed to be installed on the user's system to work. For a list of builtin fontssee: <a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp">CSS Websafe Fonts</a>
     </div>
     
 
@@ -832,7 +818,7 @@ see: <a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp">CSS Websaf
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2703">line 2703</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2921">line 2921</a>
             </span>
         </p>
     
@@ -861,9 +847,7 @@ see: <a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp">CSS Websaf
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Set the global font to 8px Lucida Console
-rpgcode.setFont(8, "Lucida Console");
-  </code></pre>
+        <pre class="prettyprint"><code>// Set the global font to 8px Lucida Consolerpgcode.setFont(8, "Lucida Console");  </code></pre>
     
 
 
@@ -1014,7 +998,7 @@ rpgcode.setFont(8, "Lucida Console");
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3356">line 3356</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3574">line 3574</a>
             </span>
         </p>
     

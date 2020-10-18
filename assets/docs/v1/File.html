@@ -225,8 +225,7 @@
     
     
     <div class="description">
-        Loads the requested JSON file data from the requested path and returns the
-JSON text as it appears in the file.
+        Loads the requested JSON file data from the requested path and returns theJSON text as it appears in the file.
     </div>
     
 
@@ -378,7 +377,7 @@ JSON text as it appears in the file.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1933">line 1933</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2035">line 2035</a>
             </span>
         </p>
     
@@ -407,17 +406,7 @@ JSON text as it appears in the file.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>rpgcode.loadJSON(
-     "Boards/start.board", 
-     function(response) {
-         // Success callback.
-         console.log(response);
-     }, 
-     function(response) {
-         // Failure callback.
-         console.log(response);
-     }
- );</code></pre>
+        <pre class="prettyprint"><code>rpgcode.loadJSON(     "Boards/start.board",      function(response) {         // Success callback.         console.log(response);     },      function(response) {         // Failure callback.         console.log(response);     } );</code></pre>
     
 
 
@@ -441,8 +430,7 @@ JSON text as it appears in the file.
     
     
     <div class="description">
-        Saves the requested JSON data to the file specified, if the file does not
-exist it is created. If the file does exist it is overwritten.
+        Saves the requested JSON data to the file specified, if the file does notexist it is created. If the file does exist it is overwritten.
     </div>
     
 
@@ -594,7 +582,7 @@ exist it is created. If the file does exist it is overwritten.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2629">line 2629</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2847">line 2847</a>
             </span>
         </p>
     
@@ -623,22 +611,7 @@ exist it is created. If the file does exist it is overwritten.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>rpgcode.saveJSON(
- {
-     path: "Boards/start2.board", // Subdirectory and file to save.
-     data: {"Test": "Hello world!"} // JSON data to store.
- },
- function(response) {
-    // Success callback.
-    console.log(response);
-    rpgcode.endProgram();
- }, 
- function(response) {
-    // Failure callback.
-    console.log(response);
-    rpgcode.endProgram();
- }
-);</code></pre>
+        <pre class="prettyprint"><code>rpgcode.saveJSON( {     path: "Boards/start2.board", // Subdirectory and file to save.     data: {"Test": "Hello world!"} // JSON data to store. }, function(response) {    // Success callback.    console.log(response);    rpgcode.endProgram(); },  function(response) {    // Failure callback.    console.log(response);    rpgcode.endProgram(); });</code></pre>
     
 
 

@@ -225,8 +225,7 @@
     
     
     <div class="description">
-        Adds a program that will be called at runtime for each frame. You 
-should avoid doing any lengthy operations with these programs.
+        Adds a program that will be called at runtime for each frame. You should avoid doing any lengthy operations with these programs.
     </div>
     
 
@@ -328,7 +327,7 @@ should avoid doing any lengthy operations with these programs.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line211">line 211</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line222">line 222</a>
             </span>
         </p>
     
@@ -381,9 +380,7 @@ should avoid doing any lengthy operations with these programs.
     
     
     <div class="description">
-        Ends the current program and releases control back to the main game loop. If nextProgram is
-specified the main loop will not resume. Execution will be immediately passed to the program
-the user specified.
+        Ends the current program and releases control back to the main game loop. If nextProgram isspecified the main loop will not resume. Execution will be immediately passed to the programthe user specified.
     </div>
     
 
@@ -485,7 +482,7 @@ the user specified.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line998">line 998</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1040">line 1040</a>
             </span>
         </p>
     
@@ -514,11 +511,7 @@ the user specified.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// End the current program and release control back to the engine.
-rpgcode.endProgram();
-
-// End the current program, then run another.
-rpgcode.endProgram("MyProgram.js");</code></pre>
+        <pre class="prettyprint"><code>// End the current program and release control back to the engine.rpgcode.endProgram();// End the current program, then run another.rpgcode.endProgram("MyProgram.js");</code></pre>
     
 
 
@@ -593,7 +586,7 @@ rpgcode.endProgram("MyProgram.js");</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1518">line 1518</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1604">line 1604</a>
             </span>
         </p>
     
@@ -647,8 +640,7 @@ rpgcode.endProgram("MyProgram.js");</code></pre>
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var program = rpgcode.getRunningProgram();
-rpgcode.log(program);</code></pre>
+        <pre class="prettyprint"><code>var program = rpgcode.getRunningProgram();rpgcode.log(program);</code></pre>
     
 
 
@@ -672,8 +664,7 @@ rpgcode.log(program);</code></pre>
     
     
     <div class="description">
-        Removes a run time program from the engine, if the program is currently
-executing it will be allowed to finish first.
+        Removes a run time program from the engine, if the program is currentlyexecuting it will be allowed to finish first.
     </div>
     
 
@@ -775,7 +766,7 @@ executing it will be allowed to finish first.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2512">line 2512</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2672">line 2672</a>
             </span>
         </p>
     
@@ -930,7 +921,7 @@ executing it will be allowed to finish first.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2564">line 2564</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2782">line 2782</a>
             </span>
         </p>
     
@@ -959,11 +950,7 @@ executing it will be allowed to finish first.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Run a program at the root of the "Programs"
-rpgcode.runProgram("MyProgram.js");
-
-// Run a program in a subpath of "Programs"
-rpgcode.runProgram("examples/MyProgram.js");</code></pre>
+        <pre class="prettyprint"><code>// Run a program at the root of the "Programs"rpgcode.runProgram("MyProgram.js");// Run a program in a subpath of "Programs"rpgcode.runProgram("examples/MyProgram.js");</code></pre>
     
 
 
@@ -1114,7 +1101,7 @@ rpgcode.runProgram("examples/MyProgram.js");</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3389">line 3389</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3607">line 3607</a>
             </span>
         </p>
     

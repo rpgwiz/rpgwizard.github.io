@@ -211,12 +211,192 @@
 
 
     
+    <h4 class="name" id="isPlaying">
+        <a class="href-link" href="#isPlaying">#</a>
+        
+        <span class="code-name">
+            
+                isPlaying<span class="signature">(id)</span><span class="type-signature"> &rarr; {boolean}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Checks if a sound with the asset id is currently playing.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>id</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">Id of the sound asset to check for.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="rpgcode.js.html" class="button">View Source</a>
+            <span>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1948">line 1948</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    <div class='param-desc column is-7'>whether or not the sound is playing</div>
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<span class="param-type">boolean</span>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>var playing = rpgcode.isPlaying("rain");rpgcode.log(playing);</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
     <h4 class="name" id="playSound">
         <a class="href-link" href="#playSound">#</a>
         
         <span class="code-name">
             
-                playSound<span class="signature">(file, loop, volume<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Object}</span>
+                playSound<span class="signature">(id, loop, volume<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Object}</span>
             
         </span>
     </h4>
@@ -267,7 +447,7 @@
             
 <tr class="deep-level-0">
   
-      <td class="name"><code>file</code></td>
+      <td class="name"><code>id</code></td>
   
 
   <td class="type">
@@ -295,7 +475,7 @@
       </td>
   
 
-  <td class="description last">Relative path to the sound file to play.</td>
+  <td class="description last">Id of the sound asset to play.</td>
 </tr>
 
 
@@ -421,7 +601,7 @@
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1988">line 1988</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2148">line 2148</a>
             </span>
         </p>
     
@@ -475,18 +655,7 @@
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Game assets used in this program.
-var assets = {
- "audio": {
-     "intro": "intro.mp3"
- }
-};
-
-// Load up the assets we need
-rpgcode.loadAssets(assets, function () {
- // The sound file is loaded play it in an infinite loop.
- rpgcode.playSound("intro", true);
-}); </code></pre>
+        <pre class="prettyprint"><code>// Game assets used in this program.var assets = { "audio": {     "intro": "intro.mp3" }};// Load up the assets we needrpgcode.loadAssets(assets, function () { // The sound file is loaded play it in an infinite loop. rpgcode.playSound("intro", true);}); </code></pre>
     
 
 
@@ -612,7 +781,7 @@ rpgcode.loadAssets(assets, function () {
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3115">line 3115</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3333">line 3333</a>
             </span>
         </p>
     

@@ -225,10 +225,7 @@
     
     
     <div class="description">
-        Adds the layer image to the requested layer, it will be rendered immediately
-after being added to the board.
-
-Note: Layers images added this way will be lost the moment the board is reloaded.
+        Adds the layer image to the requested layer, it will be rendered immediatelyafter being added to the board.Note: Layers images added this way will be lost the moment the board is reloaded.
     </div>
     
 
@@ -355,7 +352,7 @@ Note: Layers images added this way will be lost the moment the board is reloaded
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line194">line 194</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line205">line 205</a>
             </span>
         </p>
     
@@ -384,14 +381,7 @@ Note: Layers images added this way will be lost the moment the board is reloaded
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var image = {
- "src": "battle-background.png", // pre-loaded asset image
- "x": 50,                        // x location on board in pixels
- "y": 100,                       // y location on board in pixels
- "id": "battle.background"       // unique for this layer image
-}
-
-rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current board</code></pre>
+        <pre class="prettyprint"><code>var image = { "src": "battle-background.png", // pre-loaded asset image "x": 50,                        // x location on board in pixels "y": 100,                       // y location on board in pixels "id": "battle.background"       // unique for this layer image}rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current board</code></pre>
     
 
 
@@ -759,7 +749,7 @@ rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current boa
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line631">line 631</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line673">line 673</a>
             </span>
         </p>
     
@@ -788,11 +778,7 @@ rpgcode.addLayerImage(image, 1); // Adds the image to layer 1 on the current boa
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Draw the image onto the default canvas.
-rpgcode.drawImage("life.png", 0, 0, 32, 32, 0);
-
-// Draw the image onto the canvas we specified.
-rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "myCanvas");</code></pre>
+        <pre class="prettyprint"><code>// Draw the image onto the default canvas.rpgcode.drawImage("life.png", 0, 0, 32, 32, 0);// Draw the image onto the canvas we specified.rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "myCanvas");</code></pre>
     
 
 
@@ -1308,7 +1294,7 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "myCanvas");</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line687">line 687</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line729">line 729</a>
             </span>
         </p>
     
@@ -1337,11 +1323,7 @@ rpgcode.drawImage("life.png", 0, 0, 32, 32, 0, "myCanvas");</code></pre>
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Draw part of the image onto the default canvas.
-rpgcode.drawImagePart("objects.png", 64, 0, 16, 16, 8, 8, 16, 16, 0);
-
-// Draw part of the image onto the canvas we specified.
-rpgcode.drawImagePart("objects.png", 64, 0, 16, 16, 8, 8, 16, 16, 0, "myCanvas");</code></pre>
+        <pre class="prettyprint"><code>// Draw part of the image onto the default canvas.rpgcode.drawImagePart("objects.png", 64, 0, 16, 16, 8, 8, 16, 16, 0);// Draw part of the image onto the canvas we specified.rpgcode.drawImagePart("objects.png", 64, 0, 16, 16, 8, 8, 16, 16, 0, "myCanvas");</code></pre>
     
 
 
@@ -1365,8 +1347,7 @@ rpgcode.drawImagePart("objects.png", 64, 0, 16, 16, 8, 8, 16, 16, 0, "myCanvas")
     
     
     <div class="description">
-        Gets the image object if it has been loaded into the engine already, otherwise
-it returns undefined.
+        Gets the image object if it has been loaded into the engine already, otherwiseit returns undefined.
     </div>
     
 
@@ -1468,7 +1449,7 @@ it returns undefined.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1464">line 1464</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1528">line 1528</a>
             </span>
         </p>
     
@@ -1522,10 +1503,7 @@ it returns undefined.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Set the image on the smaller canvas.
-var image = rpgcode.getImage("life.png");
-rpgcode.log(image.width);
-rpgcode.log(image.height);</code></pre>
+        <pre class="prettyprint"><code>// Set the image on the smaller canvas.var image = rpgcode.getImage("life.png");rpgcode.log(image.width);rpgcode.log(image.height);</code></pre>
     
 
 
@@ -1549,8 +1527,7 @@ rpgcode.log(image.height);</code></pre>
     
     
     <div class="description">
-        Removes the layer image with the ID on the specified layer. If the image does
-not exist on the layer then there is no effect.
+        Removes the layer image with the ID on the specified layer. If the image doesnot exist on the layer then there is no effect.
     </div>
     
 
@@ -1677,7 +1654,7 @@ not exist on the layer then there is no effect.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2487">line 2487</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2647">line 2647</a>
             </span>
         </p>
     
@@ -1779,7 +1756,7 @@ not exist on the layer then there is no effect.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2752">line 2752</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2970">line 2970</a>
             </span>
         </p>
     
@@ -1874,7 +1851,7 @@ not exist on the layer then there is no effect.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2761">line 2761</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2979">line 2979</a>
             </span>
         </p>
     
@@ -1920,8 +1897,7 @@ not exist on the layer then there is no effect.
     
     
     <div class="description">
-        Update the layer image with the ID on the specified layer. If the image does
-not exist on the layer then there is no effect.
+        Update the layer image with the ID on the specified layer. If the image doesnot exist on the layer then there is no effect.
     </div>
     
 
@@ -2048,7 +2024,7 @@ not exist on the layer then there is no effect.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3308">line 3308</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3526">line 3526</a>
             </span>
         </p>
     
@@ -2077,14 +2053,7 @@ not exist on the layer then there is no effect.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var image = {
- "src": "battle-background.png", // pre-loaded asset image
- "x": 150,                       // x location on board in pixels
- "y": 100,                       // y location on board in pixels
- "id": "battle.background"       // unique for this layer image
-};
-
-rpgcode.updateLayerImage(image, 1); // Update the image with ID "battle.background" on layer 1 </code></pre>
+        <pre class="prettyprint"><code>var image = { "src": "battle-background.png", // pre-loaded asset image "x": 150,                       // x location on board in pixels "y": 100,                       // y location on board in pixels "id": "battle.background"       // unique for this layer image};rpgcode.updateLayerImage(image, 1); // Update the image with ID "battle.background" on layer 1 </code></pre>
     
 
 
@@ -2235,7 +2204,7 @@ rpgcode.updateLayerImage(image, 1); // Update the image with ID "battle.backgrou
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3396">line 3396</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3614">line 3614</a>
             </span>
         </p>
     

@@ -225,9 +225,7 @@
     
     
     <div class="description">
-        Dynamically adds a sprite to the current board, when the sprite has been added
-the callback function will be invoked, if any. Useful for spawning item
-pickups or enemies.
+        Dynamically adds a sprite to the current board, when the sprite has been addedthe callback function will be invoked, if any. Useful for spawning itempickups or enemies.
     </div>
     
 
@@ -354,7 +352,7 @@ pickups or enemies.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line249">line 249</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line260">line 260</a>
             </span>
         </p>
     
@@ -383,27 +381,7 @@ pickups or enemies.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var sprite = {
- "name":"skeleton.enemy",
- "id":"test3",
- "thread":"AI/PassiveEnemy.js",
- "startingPosition":{
-    "x":232,
-    "y":120,
-    "layer":1
- },
- "events":[
-    {
-      "program":"AI/BumpCharacter.js",
-       "type":"overlap",
-       "key":""
-    }
- ]
-};
-
-rpgcode.addSprite(sprite, function() {
- rpgcode.log("Sprite added to board.");
-});</code></pre>
+        <pre class="prettyprint"><code>var sprite = { "name":"skeleton.enemy", "id":"test3", "thread":"AI/PassiveEnemy.js", "startingPosition":{    "x":232,    "y":120,    "layer":1 }, "events":[    {      "program":"AI/BumpCharacter.js",       "type":"overlap",       "key":""    } ]};rpgcode.addSprite(sprite, function() { rpgcode.log("Sprite added to board.");});</code></pre>
     
 
 
@@ -427,8 +405,7 @@ rpgcode.addSprite(sprite, function() {
     
     
     <div class="description">
-        Animates the sprite using the requested animation. The animationId must be 
-available for the sprite.
+        Animates the sprite using the requested animation. The animationId must be available for the sprite.
     </div>
     
 
@@ -580,7 +557,7 @@ available for the sprite.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line271">line 271</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line282">line 282</a>
             </span>
         </p>
     
@@ -609,11 +586,7 @@ available for the sprite.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var spriteId = "mysprite";
-var animationId = "DANCE";
-rpgcode.animateSprite(spriteId, animationId, function() {
- rpgcode.log("Finished dancing");
-});</code></pre>
+        <pre class="prettyprint"><code>var spriteId = "mysprite";var animationId = "DANCE";rpgcode.animateSprite(spriteId, animationId, function() { rpgcode.log("Finished dancing");});</code></pre>
     
 
 
@@ -739,7 +712,7 @@ rpgcode.animateSprite(spriteId, animationId, function() {
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line559">line 559</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line570">line 570</a>
             </span>
         </p>
     
@@ -769,6 +742,368 @@ rpgcode.animateSprite(spriteId, animationId, function() {
     
     
         <pre class="prettyprint"><code>rpgcode.destroySprite("evil-eye-1");</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="getEnemy">
+        <a class="href-link" href="#getEnemy">#</a>
+        
+        <span class="code-name">
+            
+                getEnemy<span class="signature">(spriteId)</span><span class="type-signature"> &rarr; {<a href="Asset.html#.EnemyAsset">Asset.EnemyAsset</a>|null}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Gets the enemy asset by its spriteId as set in the editor.Returns null if the spriteId cannot be found.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>spriteId</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="rpgcode.js.html" class="button">View Source</a>
+            <span>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1446">line 1446</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<span class="param-type"><a href="Asset.html#.EnemyAsset">Asset.EnemyAsset</a></span>
+|
+
+<span class="param-type">null</span>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const enemy = rpgcode.getEnemy("enemy-1");console.log(enemy.name);</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="getNpc">
+        <a class="href-link" href="#getNpc">#</a>
+        
+        <span class="code-name">
+            
+                getNpc<span class="signature">(spriteId)</span><span class="type-signature"> &rarr; {<a href="Asset.html#.NpcAsset">Asset.NpcAsset</a>|null}</span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Gets the npc asset by its spriteId as set in the editor.Returns null if the spriteId cannot be found.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>spriteId</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last"></td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="rpgcode.js.html" class="button">View Source</a>
+            <span>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1568">line 1568</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='columns method-parameter'>
+        <div class="column is-2"><label>Returns:</label></div>
+        <div class="column is-10">
+            
+                    
+
+<div class="columns">
+    
+    
+    <div class='column is-5 has-text-left'>
+        <label>Type: </label>
+        
+<span class="param-type"><a href="Asset.html#.NpcAsset">Asset.NpcAsset</a></span>
+|
+
+<span class="param-type">null</span>
+
+
+    </div>
+    
+</div>
+
+                
+        </div>
+    </div>
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>const npc = rpgcode.getNpc("npc-1");console.log(npc.name);</code></pre>
     
 
 
@@ -894,7 +1229,7 @@ rpgcode.animateSprite(spriteId, animationId, function() {
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1590">line 1590</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1676">line 1676</a>
             </span>
         </p>
     
@@ -1072,7 +1407,7 @@ rpgcode.animateSprite(spriteId, animationId, function() {
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1606">line 1606</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1692">line 1692</a>
             </span>
         </p>
     
@@ -1145,8 +1480,7 @@ rpgcode.animateSprite(spriteId, animationId, function() {
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var direction = rpgcode.getSpriteDirection();
-rpgcode.log(direction);</code></pre>
+        <pre class="prettyprint"><code>var direction = rpgcode.getSpriteDirection();rpgcode.log(direction);</code></pre>
     
 
 
@@ -1170,8 +1504,7 @@ rpgcode.log(direction);</code></pre>
     
     
     <div class="description">
-        Gets the sprites's current location, optionally including the visual offset
-that happens when boards are smaller than the viewport dimensions.
+        Gets the sprites's current location, optionally including the visual offsetthat happens when boards are smaller than the viewport dimensions.
     </div>
     
 
@@ -1323,7 +1656,7 @@ that happens when boards are smaller than the viewport dimensions.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1537">line 1537</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1623">line 1623</a>
             </span>
         </p>
     
@@ -1377,8 +1710,7 @@ that happens when boards are smaller than the viewport dimensions.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var location = rpgcode.getSpriteLocation("rat");
-rpgcode.log(location);</code></pre>
+        <pre class="prettyprint"><code>var location = rpgcode.getSpriteLocation("rat");rpgcode.log(location);</code></pre>
     
 
 
@@ -1554,7 +1886,7 @@ rpgcode.log(location);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2009">line 2009</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2169">line 2169</a>
             </span>
         </p>
     
@@ -1583,11 +1915,7 @@ rpgcode.log(location);</code></pre>
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Move the sprite with id "mysprite" in the north direction by 50 pixels.
-var spriteId = "mysprite";
-var direction = "NORTH";
-var distancePx = 50;
-rpgcode.moveSprite(spriteId, direction, distancePx);</code></pre>
+        <pre class="prettyprint"><code>// Move the sprite with id "mysprite" in the north direction by 50 pixels.var spriteId = "mysprite";var direction = "NORTH";var distancePx = 50;rpgcode.moveSprite(spriteId, direction, distancePx);</code></pre>
     
 
 
@@ -1611,10 +1939,7 @@ rpgcode.moveSprite(spriteId, direction, distancePx);</code></pre>
     
     
     <div class="description">
-        Moves the sprite to the (x, y) position, the sprite will travel for the
-supplied duration (milliseconds).
-
-A short duration will result in the sprite arriving quicker and vice versa.
+        Moves the sprite to the (x, y) position, the sprite will travel for thesupplied duration (milliseconds).A short duration will result in the sprite arriving quicker and vice versa.
     </div>
     
 
@@ -1816,7 +2141,7 @@ A short duration will result in the sprite arriving quicker and vice versa.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2133">line 2133</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2293">line 2293</a>
             </span>
         </p>
     
@@ -1845,12 +2170,317 @@ A short duration will result in the sprite arriving quicker and vice versa.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Move towards (100, 150) for 50 milliseconds, this will animate the sprite.
-var spriteId = "mysprite";
-var x = 100;
-var y = 150;
-var delay = 50;
-rpgcode.moveSpriteTo(spriteId, x, y, delay);</code></pre>
+        <pre class="prettyprint"><code>// Move towards (100, 150) for 50 milliseconds, this will animate the sprite.var spriteId = "mysprite";var x = 100;var y = 150;var delay = 50;rpgcode.moveSpriteTo(spriteId, x, y, delay);</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="pauseSprites">
+        <a class="href-link" href="#pauseSprites">#</a>
+        
+        <span class="code-name">
+            
+                pauseSprites<span class="signature">(spriteIds)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Pauses animation and movement for all requested sprites.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>spriteIds</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">Sprites to pause.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="rpgcode.js.html" class="button">View Source</a>
+            <span>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2102">line 2102</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Pauses every spriterpgcode.pauseSprites();// Pauses just one spriterpgcode.pauseSprites(["sprite-1"]);// Pauses multiple spritesrpgcode.pauseSprites(["sprite-1", "sprite-2", "sprite-3"]);</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
+    <h4 class="name" id="resumeSprites">
+        <a class="href-link" href="#resumeSprites">#</a>
+        
+        <span class="code-name">
+            
+                resumeSprites<span class="signature">(spriteIds)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Resumes animation and movement for all requested sprites.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>spriteIds</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">Sprites to resume.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="rpgcode.js.html" class="button">View Source</a>
+            <span>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2746">line 2746</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>// Resumes every spriterpgcode.resumeSprites();// Resumes just one spriterpgcode.resumeSprites(["sprite-1"]);// Resumes multiple spritesrpgcode.resumeSprites(["sprite-1", "sprite-2", "sprite-3"]);</code></pre>
     
 
 
@@ -2076,7 +2706,7 @@ rpgcode.moveSpriteTo(spriteId, x, y, delay);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2931">line 2931</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3149">line 3149</a>
             </span>
         </p>
     
@@ -2105,13 +2735,7 @@ rpgcode.moveSpriteTo(spriteId, x, y, delay);</code></pre>
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Place a sprite at the tile coordinates (10, 10, 1).
-var spriteId = "mysprite";
-var x = 10;
-var y = 10;
-var layer = 1;
-var inTiles = true;
-rpgcode.setSpriteLocation(spriteId, x, y, layer, inTiles);</code></pre>
+        <pre class="prettyprint"><code>// Place a sprite at the tile coordinates (10, 10, 1).var spriteId = "mysprite";var x = 10;var y = 10;var layer = 1;var inTiles = true;rpgcode.setSpriteLocation(spriteId, x, y, layer, inTiles);</code></pre>
     
 
 
@@ -2262,7 +2886,7 @@ rpgcode.setSpriteLocation(spriteId, x, y, layer, inTiles);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2961">line 2961</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3179">line 3179</a>
             </span>
         </p>
     
@@ -2291,10 +2915,7 @@ rpgcode.setSpriteLocation(spriteId, x, y, layer, inTiles);</code></pre>
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Set the sprite with ID "mysprite" to its idle stance.
-var spriteId = "mysprite";
-var stanceId = "IDLE";
-rpgcode.setSpriteStance(spriteId, stanceId);</code></pre>
+        <pre class="prettyprint"><code>// Set the sprite with ID "mysprite" to its idle stance.var spriteId = "mysprite";var stanceId = "IDLE";rpgcode.setSpriteStance(spriteId, stanceId);</code></pre>
     
 
 

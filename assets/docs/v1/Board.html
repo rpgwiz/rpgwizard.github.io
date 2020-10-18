@@ -211,6 +211,161 @@
 
 
     
+    <h4 class="name" id="destroyVector">
+        <a class="href-link" href="#destroyVector">#</a>
+        
+        <span class="code-name">
+            
+                destroyVector<span class="signature">(vectorId)</span><span class="type-signature"></span>
+            
+        </span>
+    </h4>
+    
+
+    
+    
+    <div class="description">
+        Destroys a vector by its ID field.
+    </div>
+    
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+<div class="table-container">
+    <table class="params table">
+        <thead>
+        <tr>
+            
+            <th>Name</th>
+            
+
+            <th>Type</th>
+
+            
+
+            
+
+            <th class="last">Description</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        
+
+            
+<tr class="deep-level-0">
+  
+      <td class="name"><code>vectorId</code></td>
+  
+
+  <td class="type">
+  
+      
+<span class="param-type">string</span>
+
+
+  
+  </td>
+
+  
+
+  
+
+  <td class="description last">The ID of the vector as it appears in the editor.</td>
+</tr>
+
+
+        
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+
+    
+
+    
+
+    
+        <p class="tag-source">
+            <a href="rpgcode.js.html" class="button">View Source</a>
+            <span>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line590">line 590</a>
+            </span>
+        </p>
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Example</h5>
+    
+    
+        <pre class="prettyprint"><code>rpgcode.destroyVector("some-vector-id");</code></pre>
+    
+
+
+</div>
+            
+                <div class="member">
+
+
+    
     <h4 class="name" id="getBoard">
         <a class="href-link" href="#getBoard">#</a>
         
@@ -225,8 +380,7 @@
     
     
     <div class="description">
-        Gets the current board, useful for accessing certain properties e.g.
-name, description etc.
+        Gets the current board, useful for accessing certain properties e.g.name, description etc.
     </div>
     
 
@@ -277,7 +431,7 @@ name, description etc.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1237">line 1237</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1279">line 1279</a>
             </span>
         </p>
     
@@ -331,8 +485,7 @@ name, description etc.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var board = rpgcode.getBoard();
-rpgcode.log(board);</code></pre>
+        <pre class="prettyprint"><code>var board = rpgcode.getBoard();rpgcode.log(board);</code></pre>
     
 
 
@@ -407,7 +560,7 @@ rpgcode.log(board);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1252">line 1252</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1294">line 1294</a>
             </span>
         </p>
     
@@ -461,8 +614,7 @@ rpgcode.log(board);</code></pre>
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var boardName = rpgcode.getBoardName();
-rpgcode.log(boardName);</code></pre>
+        <pre class="prettyprint"><code>var boardName = rpgcode.getBoardName();rpgcode.log(boardName);</code></pre>
     
 
 
@@ -486,12 +638,7 @@ rpgcode.log(boardName);</code></pre>
     
     
     <div class="description">
-        Gets the data associated with a tile on the board as set in the Editor's 
-Tileset properties. 
-
-Returns "null" if no data can be found. 
-
-Throws an exception if either the layer or tile is out-of-bounds.
+        Gets the data associated with a tile on the board as set in the Editor's Tileset properties. Returns "null" if no data can be found. Throws an exception if either the layer or tile is out-of-bounds.
     </div>
     
 
@@ -643,7 +790,7 @@ Throws an exception if either the layer or tile is out-of-bounds.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1658">line 1658</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1744">line 1744</a>
             </span>
         </p>
     
@@ -714,11 +861,7 @@ Throws an exception if either the layer or tile is out-of-bounds.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Get the tile data at (10, 5, 1), and log the output
-const tileData = rpgcode.getTileData(10, 5, 1);
-rpgcode.log(tileData.type);
-rpgcode.log(tileData.defence);
-rpgcode.log(tileData.custom);</code></pre>
+        <pre class="prettyprint"><code>// Get the tile data at (10, 5, 1), and log the outputconst tileData = rpgcode.getTileData(10, 5, 1);rpgcode.log(tileData.type);rpgcode.log(tileData.defence);rpgcode.log(tileData.custom);</code></pre>
     
 
 
@@ -894,7 +1037,7 @@ rpgcode.log(tileData.custom);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2533">line 2533</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2693">line 2693</a>
             </span>
         </p>
     
@@ -923,8 +1066,7 @@ rpgcode.log(tileData.custom);</code></pre>
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Removes the tile at (x: 11, y: 9, layer: 1).
-rpgcode.removeTile(11, 9, 1); </code></pre>
+        <pre class="prettyprint"><code>// Removes the tile at (x: 11, y: 9, layer: 1).rpgcode.removeTile(11, 9, 1); </code></pre>
     
 
 
@@ -1150,7 +1292,7 @@ rpgcode.removeTile(11, 9, 1); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2470">line 2470</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2630">line 2630</a>
             </span>
         </p>
     
@@ -1179,9 +1321,7 @@ rpgcode.removeTile(11, 9, 1); </code></pre>
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Places the tile at (x: 11, y: 10, layer: 0) with the 81st tile 
-// from the tileset "tileset1.tileset".
-rpgcode.replaceTile(11, 10, 0, "tileset1.tileset", 81);</code></pre>
+        <pre class="prettyprint"><code>// Places the tile at (x: 11, y: 10, layer: 0) with the 81st tile // from the tileset "tileset1.tileset".rpgcode.replaceTile(11, 10, 0, "tileset1.tileset", 81);</code></pre>
     
 
 
@@ -1382,7 +1522,7 @@ rpgcode.replaceTile(11, 10, 0, "tileset1.tileset", 81);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2663">line 2663</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2881">line 2881</a>
             </span>
         </p>
     
@@ -1411,11 +1551,7 @@ rpgcode.replaceTile(11, 10, 0, "tileset1.tileset", 81);</code></pre>
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Use current character layer.
-rpgcode.sendToBoard("Room1.board", 11.5, 18); 
-
-// Explictly state which layer.
-rpgcode.sendToBoard("Room1.board", 11.5, 18, 1);</code></pre>
+        <pre class="prettyprint"><code>// Use current character layer.rpgcode.sendToBoard("Room1.board", 11.5, 18); // Explictly state which layer.rpgcode.sendToBoard("Room1.board", 11.5, 18, 1);</code></pre>
     
 
 
@@ -1589,7 +1725,7 @@ rpgcode.sendToBoard("Room1.board", 11.5, 18, 1);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3381">line 3381</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3599">line 3599</a>
             </span>
         </p>
     

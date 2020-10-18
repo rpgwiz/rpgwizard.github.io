@@ -227,9 +227,7 @@
     
     
     <div class="description">
-        Returns a true or false value indicating whether an asset is currently loaded.
-
-Note: For audio files use the identifier key, not the filename.
+        Returns a true or false value indicating whether an asset is currently loaded.Note: For audio files use the identifier key, not the filename.
     </div>
     
 
@@ -356,7 +354,7 @@ Note: For audio files use the identifier key, not the filename.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1823">line 1823</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1909">line 1909</a>
             </span>
         </p>
     
@@ -408,8 +406,7 @@ Note: For audio files use the identifier key, not the filename.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>rpgcode.log(rpgcode.isAssetLoaded("Hero/attack_east.png", "image")); // logs true
-rpgcode.log(rpgcode.isAssetLoaded("intro", "audio")); // logs true</code></pre>
+        <pre class="prettyprint"><code>rpgcode.log(rpgcode.isAssetLoaded("Hero/attack_east.png", "image")); // logs truerpgcode.log(rpgcode.isAssetLoaded("intro", "audio")); // logs true</code></pre>
     
 
 
@@ -433,10 +430,7 @@ rpgcode.log(rpgcode.isAssetLoaded("intro", "audio")); // logs true</code></pre>
     
     
     <div class="description">
-        Loads the requested assets into the engine, when all of the assets have been loaded
-the onLoad callback is invoked.
-
-For more information, see <a href="tutorial-03-Asset-Management.html">Asset Management</a>
+        Loads the requested assets into the engine, when all of the assets have been loadedthe onLoad callback is invoked.For more information, see <a href="tutorial-03-Asset-Management.html">Asset Management</a>
     </div>
     
 
@@ -563,7 +557,7 @@ For more information, see <a href="tutorial-03-Asset-Management.html">Asset Mana
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1880">line 1880</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1982">line 1982</a>
             </span>
         </p>
     
@@ -592,23 +586,7 @@ For more information, see <a href="tutorial-03-Asset-Management.html">Asset Mana
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Game assets used in this program.
-var assets = {
- "audio": {
-     "intro": "intro.mp3"
- },
- "images": [
-     "block.png",
-     "mwin_small.png",
-     "sword_profile_1_small.png",
-     "startscreen.png"
- ]
-};
-
-// Load up the assets we need
-rpgcode.loadAssets(assets, function () {
- // Assets we need are ready, continue on...
-});</code></pre>
+        <pre class="prettyprint"><code>// Game assets used in this program.var assets = { "audio": {     "intro": "intro.mp3" }, "images": [     "block.png",     "mwin_small.png",     "sword_profile_1_small.png",     "startscreen.png" ]};// Load up the assets we needrpgcode.loadAssets(assets, function () { // Assets we need are ready, continue on...});</code></pre>
     
 
 
@@ -734,7 +712,7 @@ rpgcode.loadAssets(assets, function () {
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2405">line 2405</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2565">line 2565</a>
             </span>
         </p>
     
@@ -763,21 +741,7 @@ rpgcode.loadAssets(assets, function () {
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Game assets to unload from the engine.
-var assets = {
- "audio": {
-     "intro": "intro.mp3"
- },
- "images": [
-     "block.png",
-     "mwin_small.png",
-     "sword_profile_1_small.png",
-     "startscreen.png"
- ]
-};
-
-// Remove some assets after use
-rpgcode.removeAssets(assets); </code></pre>
+        <pre class="prettyprint"><code>// Game assets to unload from the engine.var assets = { "audio": {     "intro": "intro.mp3" }, "images": [     "block.png",     "mwin_small.png",     "sword_profile_1_small.png",     "startscreen.png" ]};// Remove some assets after userpgcode.removeAssets(assets); </code></pre>
     
 
 
@@ -951,7 +915,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3411">line 3411</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3629">line 3629</a>
             </span>
         </p>
     
@@ -1306,7 +1270,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3705">line 3705</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3923">line 3923</a>
             </span>
         </p>
     
@@ -1563,7 +1527,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3780">line 3780</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3998">line 3998</a>
             </span>
         </p>
     
@@ -1780,7 +1744,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3789">line 3789</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line4007">line 4007</a>
             </span>
         </p>
     
@@ -2181,7 +2145,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3614">line 3614</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3832">line 3832</a>
             </span>
         </p>
     
@@ -2521,7 +2485,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3548">line 3548</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3766">line 3766</a>
             </span>
         </p>
     
@@ -2750,7 +2714,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3470">line 3470</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3688">line 3688</a>
             </span>
         </p>
     
@@ -3013,7 +2977,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3426">line 3426</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3644">line 3644</a>
             </span>
         </p>
     
@@ -3227,7 +3191,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3454">line 3454</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3672">line 3672</a>
             </span>
         </p>
     
@@ -3375,7 +3339,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3419">line 3419</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3637">line 3637</a>
             </span>
         </p>
     
@@ -3569,7 +3533,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3799">line 3799</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line4017">line 4017</a>
             </span>
         </p>
     
@@ -3786,7 +3750,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3808">line 3808</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line4026">line 4026</a>
             </span>
         </p>
     
@@ -3859,7 +3823,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3495">line 3495</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3713">line 3713</a>
             </span>
         </p>
     
@@ -4289,7 +4253,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3478">line 3478</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3696">line 3696</a>
             </span>
         </p>
     
@@ -4437,7 +4401,7 @@ rpgcode.removeAssets(assets); </code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3463">line 3463</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3681">line 3681</a>
             </span>
         </p>
     

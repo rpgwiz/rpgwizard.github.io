@@ -278,7 +278,7 @@
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line463">line 463</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line474">line 474</a>
             </span>
         </p>
     
@@ -307,13 +307,7 @@
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Display some dialog.
-rpgcode.showDialog("Hello world!");
-
-// Clears the dialog after 5 seconds have elapsed.
-rpgcode.delay(5000, function(){ 
- rpgcode.clearDialog();
-});</code></pre>
+        <pre class="prettyprint"><code>// Display some dialog.rpgcode.showDialog("Hello world!");// Clears the dialog after 5 seconds have elapsed.rpgcode.delay(5000, function(){  rpgcode.clearDialog();});</code></pre>
     
 
 
@@ -337,8 +331,7 @@ rpgcode.delay(5000, function(){
     
     
     <div class="description">
-        Delays the execution of a callback for a specified number of milliseconds, 
-after which the callback function is invoked.
+        Delays the execution of a callback for a specified number of milliseconds, after which the callback function is invoked.
     </div>
     
 
@@ -490,7 +483,7 @@ after which the callback function is invoked.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line520">line 520</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line531">line 531</a>
             </span>
         </p>
     
@@ -544,10 +537,7 @@ after which the callback function is invoked.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Logs to the console after 5 seconds
-rpgcode.delay(5000, function(){ 
- rpgcode.log("Hello world!");
-});</code></pre>
+        <pre class="prettyprint"><code>// Logs to the console after 5 secondsrpgcode.delay(5000, function(){  rpgcode.log("Hello world!");});</code></pre>
     
 
 
@@ -698,7 +688,7 @@ rpgcode.delay(5000, function(){
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1503">line 1503</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1589">line 1589</a>
             </span>
         </p>
     
@@ -752,8 +742,7 @@ rpgcode.delay(5000, function(){
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var result = rpgcode.getRandom(1, 10);
-rpgcode.log(result); // Will be between 1 and 10.</code></pre>
+        <pre class="prettyprint"><code>var result = rpgcode.getRandom(1, 10);rpgcode.log(result); // Will be between 1 and 10.</code></pre>
     
 
 
@@ -777,8 +766,7 @@ rpgcode.log(result); // Will be between 1 and 10.</code></pre>
     
     
     <div class="description">
-        Gets the current scale factor that the renderer has been drawn with, useful
-for creating responsive and scalable UIs.
+        Gets the current scale factor that the renderer has been drawn with, usefulfor creating responsive and scalable UIs.
     </div>
     
 
@@ -829,7 +817,7 @@ for creating responsive and scalable UIs.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1575">line 1575</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1661">line 1661</a>
             </span>
         </p>
     
@@ -881,8 +869,7 @@ for creating responsive and scalable UIs.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var scale = rpgcode.getScale();
-rpgcode.log(scale);</code></pre>
+        <pre class="prettyprint"><code>var scale = rpgcode.getScale();rpgcode.log(scale);</code></pre>
     
 
 
@@ -906,12 +893,7 @@ rpgcode.log(scale);</code></pre>
     
     
     <div class="description">
-        Gets the viewport object, this is useful for calculating the position of 
-characters or sprites on the board relative to the RPGcode screen.
-
-The viewport contains the (x, y) values of the upper left corner of screen
-relative to a board's (x, y). It also returns the width and height of the
-viewport, and the current visual offset (x, y) of the board and viewport.
+        Gets the viewport object, this is useful for calculating the position of characters or sprites on the board relative to the RPGcode screen.The viewport contains the (x, y) values of the upper left corner of screenrelative to a board's (x, y). It also returns the width and height of theviewport, and the current visual offset (x, y) of the board and viewport.
     </div>
     
 
@@ -962,7 +944,7 @@ viewport, and the current visual offset (x, y) of the board and viewport.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1700">line 1700</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1786">line 1786</a>
             </span>
         </p>
     
@@ -1014,13 +996,7 @@ viewport, and the current visual offset (x, y) of the board and viewport.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var viewport = rpgcode.getViewport();
-rpgcode.log(viewport.x);
-rpgcode.log(viewport.y);
-rpgcode.log(viewport.width);
-rpgcode.log(viewport.height);
-rpgcode.log(viewport.offsetX);
-rpgcode.log(viewport.offsetY);</code></pre>
+        <pre class="prettyprint"><code>var viewport = rpgcode.getViewport();rpgcode.log(viewport.x);rpgcode.log(viewport.y);rpgcode.log(viewport.width);rpgcode.log(viewport.height);rpgcode.log(viewport.offsetX);rpgcode.log(viewport.offsetY);</code></pre>
     
 
 
@@ -1044,9 +1020,7 @@ rpgcode.log(viewport.offsetY);</code></pre>
     
     
     <div class="description">
-        Hits the character dealing the requested damage while playing the corresponding
-animation. Optionally a callback can be invoked when the hit animation
-has finished playing.
+        Hits the character dealing the requested damage while playing the correspondinganimation. Optionally a callback can be invoked when the hit animationhas finished playing.
     </div>
     
 
@@ -1223,7 +1197,7 @@ has finished playing.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1756">line 1756</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1842">line 1842</a>
             </span>
         </p>
     
@@ -1252,13 +1226,7 @@ has finished playing.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Without a callback.
-rpgcode.hitCharacter("Hero", 1, "DEFEND");
-
-// With a callback.
-rpgcode.hitCharacter("Hero", 1, "DEFEND", function() {
- // The animation has ended, do something.
-});</code></pre>
+        <pre class="prettyprint"><code>// Without a callback.rpgcode.hitCharacter("Hero", 1, "DEFEND");// With a callback.rpgcode.hitCharacter("Hero", 1, "DEFEND", function() { // The animation has ended, do something.});</code></pre>
     
 
 
@@ -1282,9 +1250,7 @@ rpgcode.hitCharacter("Hero", 1, "DEFEND", function() {
     
     
     <div class="description">
-        Hits the enemy dealing the requested damage while playing the corresponding
-animation. Optionally a callback can be invoked when the hit animation
-has finished playing.
+        Hits the enemy dealing the requested damage while playing the correspondinganimation. Optionally a callback can be invoked when the hit animationhas finished playing.
     </div>
     
 
@@ -1461,7 +1427,7 @@ has finished playing.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1792">line 1792</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1878">line 1878</a>
             </span>
         </p>
     
@@ -1490,13 +1456,7 @@ has finished playing.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Without a callback.
-rpgcode.hitEnemy("rat-1", 1, "DEFEND");
-
-// With a callback.
-rpgcode.hitEnemy("rat-1", 1, "DEFEND", function() {
- // The animation has ended, do something.
-});</code></pre>
+        <pre class="prettyprint"><code>// Without a callback.rpgcode.hitEnemy("rat-1", 1, "DEFEND");// With a callback.rpgcode.hitEnemy("rat-1", 1, "DEFEND", function() { // The animation has ended, do something.});</code></pre>
     
 
 
@@ -1520,8 +1480,7 @@ rpgcode.hitEnemy("rat-1", 1, "DEFEND", function() {
     
     
     <div class="description">
-        Returns a true or false value indicating whether standard movement controls
-are currently enabled in the engine.
+        Returns a true or false value indicating whether standard movement controlsare currently enabled in the engine.
     </div>
     
 
@@ -1572,7 +1531,7 @@ are currently enabled in the engine.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1846">line 1846</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1932">line 1932</a>
             </span>
         </p>
     
@@ -1626,8 +1585,7 @@ are currently enabled in the engine.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>var controlEnabled = rpgcode.isControlEnabled();
-rpgcode.log(controlEnabled);</code></pre>
+        <pre class="prettyprint"><code>var controlEnabled = rpgcode.isControlEnabled();rpgcode.log(controlEnabled);</code></pre>
     
 
 
@@ -1753,7 +1711,7 @@ rpgcode.log(controlEnabled);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line1960">line 1960</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2062">line 2062</a>
             </span>
         </p>
     
@@ -1857,7 +1815,7 @@ rpgcode.log(controlEnabled);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2546">line 2546</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2706">line 2706</a>
             </span>
         </p>
     
@@ -2039,7 +1997,7 @@ rpgcode.log(controlEnabled);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2822">line 2822</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3040">line 3040</a>
             </span>
         </p>
     
@@ -2068,10 +2026,7 @@ rpgcode.log(controlEnabled);</code></pre>
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Set the profile picture to use and the background dialog image.
-var profileDimensions = {width: 100, height: 100};
-var dialogDimensions = {width: 640, height: 480};
-rpgcode.setDialogDimensions(profileDimensions, dialogDimensions);</code></pre>
+        <pre class="prettyprint"><code>// Set the profile picture to use and the background dialog image.var profileDimensions = {width: 100, height: 100};var dialogDimensions = {width: 640, height: 480};rpgcode.setDialogDimensions(profileDimensions, dialogDimensions);</code></pre>
     
 
 
@@ -2224,7 +2179,7 @@ rpgcode.setDialogDimensions(profileDimensions, dialogDimensions);</code></pre>
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2840">line 2840</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3058">line 3058</a>
             </span>
         </p>
     
@@ -2253,8 +2208,7 @@ rpgcode.setDialogDimensions(profileDimensions, dialogDimensions);</code></pre>
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Set the profile picture to use and the background dialog image.
-rpgcode.setDialogGraphics("sword_profile_1_small.png", "mwin_small.png");</code></pre>
+        <pre class="prettyprint"><code>// Set the profile picture to use and the background dialog image.rpgcode.setDialogGraphics("sword_profile_1_small.png", "mwin_small.png");</code></pre>
     
 
 
@@ -2278,10 +2232,7 @@ rpgcode.setDialogGraphics("sword_profile_1_small.png", "mwin_small.png");</code>
     
     
     <div class="description">
-        Sets the padding from the top left corner of the dialog window for
-the x and/or y values. This can be used to prevent text from overlapping
-the start or end of the dialog window graphics. The default padding value
-is 5px for both x and y.
+        Sets the padding from the top left corner of the dialog window forthe x and/or y values. This can be used to prevent text from overlappingthe start or end of the dialog window graphics. The default padding valueis 5px for both x and y.
     </div>
     
 
@@ -2385,7 +2336,7 @@ is 5px for both x and y.
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2866">line 2866</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3084">line 3084</a>
             </span>
         </p>
     
@@ -2414,14 +2365,7 @@ is 5px for both x and y.
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>// Set just the x padding value.
-rpgcode.setDialogPadding({x: 10});
-
-// Set just the y padding value.
-rpgcode.setDialogPadding({y: 10});
-
-// Set both.
-rpgcode.setDialogPadding({x: 10, y: 10});</code></pre>
+        <pre class="prettyprint"><code>// Set just the x padding value.rpgcode.setDialogPadding({x: 10});// Set just the y padding value.rpgcode.setDialogPadding({y: 10});// Set both.rpgcode.setDialogPadding({x: 10, y: 10});</code></pre>
     
 
 
@@ -2445,9 +2389,7 @@ rpgcode.setDialogPadding({x: 10, y: 10});</code></pre>
     
     
     <div class="description">
-        Sets the position of the dialog window for the next call to showDialog.
-The dialog window can either appear at the top of the screen i.e. "NORTH", or
-the bottom of the screen i.e. "SOUTH". The default position is "SOUTH".
+        Sets the position of the dialog window for the next call to showDialog.The dialog window can either appear at the top of the screen i.e. "NORTH", orthe bottom of the screen i.e. "SOUTH". The default position is "SOUTH".
     </div>
     
 
@@ -2551,7 +2493,7 @@ the bottom of the screen i.e. "SOUTH". The default position is "SOUTH".
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line2899">line 2899</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3117">line 3117</a>
             </span>
         </p>
     
@@ -2580,14 +2522,7 @@ the bottom of the screen i.e. "SOUTH". The default position is "SOUTH".
     <h5>Example</h5>
     
     
-        <pre class="prettyprint"><code>rpgcode.setDialogPosition(rpgcode.dialogPosition.NORTH);
-rpgcode.showDialog("Hello north!");
-
-rpgcode.delay(5000, function() {
- rpgcode.clearDialog();
- rpcode.setDialogPosition(rpgcode.dialogPosition.SOUTH);
- rpgcode.showDialog("Hello south!");
-});</code></pre>
+        <pre class="prettyprint"><code>rpgcode.setDialogPosition(rpgcode.dialogPosition.NORTH);rpgcode.showDialog("Hello north!");rpgcode.delay(5000, function() { rpgcode.clearDialog(); rpcode.setDialogPosition(rpgcode.dialogPosition.SOUTH); rpgcode.showDialog("Hello south!");});</code></pre>
     
 
 
@@ -2611,10 +2546,7 @@ rpgcode.delay(5000, function() {
     
     
     <div class="description">
-        Shows the dialog window and adds the dialog to it if it is already 
-visible the dialog is just appended to the current window.
-
-Note the dialog window is drawn on the default "renderNowCanvas".
+        Shows the dialog window and adds the dialog to it if it is already visible the dialog is just appended to the current window.Note the dialog window is drawn on the default "renderNowCanvas".
     </div>
     
 
@@ -2718,7 +2650,7 @@ Note the dialog window is drawn on the default "renderNowCanvas".
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3069">line 3069</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3287">line 3287</a>
             </span>
         </p>
     
@@ -2898,7 +2830,7 @@ Note the dialog window is drawn on the default "renderNowCanvas".
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3374">line 3374</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3592">line 3592</a>
             </span>
         </p>
     
@@ -3138,7 +3070,7 @@ Note the dialog window is drawn on the default "renderNowCanvas".
         <p class="tag-source">
             <a href="rpgcode.js.html" class="button">View Source</a>
             <span>
-                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3363">line 3363</a>
+                <a href="rpgcode.js.html">rpgcode.js</a>, <a href="rpgcode.js.html#line3581">line 3581</a>
             </span>
         </p>
     
